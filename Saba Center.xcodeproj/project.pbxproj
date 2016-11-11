@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		49368D7B1DCF8ED600D3257D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D7A1DCF8ED600D3257D /* AppDelegate.swift */; };
-		49368D7D1DCF8ED700D3257D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D7C1DCF8ED700D3257D /* ViewController.swift */; };
 		49368D801DCF8ED700D3257D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49368D7E1DCF8ED700D3257D /* Main.storyboard */; };
 		49368D821DCF8ED800D3257D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49368D811DCF8ED800D3257D /* Assets.xcassets */; };
 		49368D851DCF8ED800D3257D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49368D831DCF8ED800D3257D /* LaunchScreen.storyboard */; };
+		49368D901DCFF54100D3257D /* GoogleDocsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D8F1DCFF54100D3257D /* GoogleDocsClient.swift */; };
+		49368D921DCFF59900D3257D /* GoogleDocsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D911DCFF59900D3257D /* GoogleDocsConstants.swift */; };
+		49368D941DCFFC6B00D3257D /* GoogleDocsConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D931DCFFC6B00D3257D /* GoogleDocsConvenience.swift */; };
+		49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D951DCFFDC700D3257D /* SabaCenterData.swift */; };
+		49368D981DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */; };
+		49368D9A1DD51D5400D3257D /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D991DD51D5400D3257D /* GCD.swift */; };
+		49368D9C1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49368D771DCF8ED500D3257D /* Saba Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saba Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49368D7A1DCF8ED600D3257D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49368D7C1DCF8ED700D3257D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49368D7F1DCF8ED700D3257D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49368D811DCF8ED800D3257D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49368D841DCF8ED800D3257D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49368D861DCF8ED900D3257D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49368D8F1DCFF54100D3257D /* GoogleDocsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDocsClient.swift; sourceTree = "<group>"; };
+		49368D911DCFF59900D3257D /* GoogleDocsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDocsConstants.swift; sourceTree = "<group>"; };
+		49368D931DCFFC6B00D3257D /* GoogleDocsConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDocsConvenience.swift; sourceTree = "<group>"; };
+		49368D951DCFFDC700D3257D /* SabaCenterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SabaCenterData.swift; sourceTree = "<group>"; };
+		49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsTableViewController.swift; sourceTree = "<group>"; };
+		49368D991DD51D5400D3257D /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +67,43 @@
 			isa = PBXGroup;
 			children = (
 				49368D7A1DCF8ED600D3257D /* AppDelegate.swift */,
-				49368D7C1DCF8ED700D3257D /* ViewController.swift */,
+				49368D991DD51D5400D3257D /* GCD.swift */,
+				49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */,
+				49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */,
+				49368D8C1DCFF4DB00D3257D /* Model */,
 				49368D7E1DCF8ED700D3257D /* Main.storyboard */,
 				49368D811DCF8ED800D3257D /* Assets.xcassets */,
 				49368D831DCF8ED800D3257D /* LaunchScreen.storyboard */,
 				49368D861DCF8ED900D3257D /* Info.plist */,
 			);
 			path = "Saba Center";
+			sourceTree = "<group>";
+		};
+		49368D8C1DCFF4DB00D3257D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49368D8D1DCFF4E300D3257D /* Clients */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		49368D8D1DCFF4E300D3257D /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				49368D8E1DCFF4F000D3257D /* SabaGoogleDocs */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		49368D8E1DCFF4F000D3257D /* SabaGoogleDocs */ = {
+			isa = PBXGroup;
+			children = (
+				49368D931DCFFC6B00D3257D /* GoogleDocsConvenience.swift */,
+				49368D8F1DCFF54100D3257D /* GoogleDocsClient.swift */,
+				49368D911DCFF59900D3257D /* GoogleDocsConstants.swift */,
+				49368D951DCFFDC700D3257D /* SabaCenterData.swift */,
+			);
+			name = SabaGoogleDocs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49368D7D1DCF8ED700D3257D /* ViewController.swift in Sources */,
+				49368D9A1DD51D5400D3257D /* GCD.swift in Sources */,
+				49368D9C1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift in Sources */,
+				49368D981DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift in Sources */,
+				49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */,
+				49368D941DCFFC6B00D3257D /* GoogleDocsConvenience.swift in Sources */,
 				49368D7B1DCF8ED600D3257D /* AppDelegate.swift in Sources */,
+				49368D901DCFF54100D3257D /* GoogleDocsClient.swift in Sources */,
+				49368D921DCFF59900D3257D /* GoogleDocsConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +350,7 @@
 				49368D8B1DCF8ED900D3257D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
