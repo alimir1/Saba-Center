@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import PrayTime
 
 class WeeklyProgramsTableViewController: UITableViewController {
     
@@ -15,34 +16,30 @@ class WeeklyProgramsTableViewController: UITableViewController {
     var testDay: [SabaCenterData.Schedule]? {
         return weeklyPrograms?[0].schedules
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let googleDocsClient = GoogleDocsClient.sharedInstance()
-        googleDocsClient.getWeeklyPrograms {
-            (data, error) in
-            guard (error == nil) else {
-                print ("ERROR! \(error)")
-                return
-            }
-            
-            if let data = data, data.count > 0 {
-                performUIUpdatesOnMain {
-                    self.weeklyPrograms = data
-                    self.tableView.reloadData()
-                }
-            } else {
-                print("There is no data!")
-            }
-        }
+//        let googleDocsClient = GoogleDocsClient.sharedInstance()
+//        googleDocsClient.getWeeklyPrograms {
+//            (data, error) in
+//            guard (error == nil) else {
+//                print ("ERROR! \(error)")
+//                return
+//            }
+//            
+//            if let data = data, data.count > 0 {
+//                performUIUpdatesOnMain {
+//                    self.weeklyPrograms = data
+//                    self.tableView.reloadData()
+//                }
+//            } else {
+//                print("There is no data!")
+//            }
+//        }
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testDay?.count ?? 0

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4902FFD71DD629F500E54871 /* PrayTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4902FFD61DD629F500E54871 /* PrayTime.m */; };
+		492836311DD6431100909041 /* PrayerTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492836301DD6431100909041 /* PrayerTimesViewController.swift */; };
+		492836331DD7A17C00909041 /* PrayerTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492836321DD7A17C00909041 /* PrayerTimeModel.swift */; };
 		49368D7B1DCF8ED600D3257D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D7A1DCF8ED600D3257D /* AppDelegate.swift */; };
 		49368D801DCF8ED700D3257D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49368D7E1DCF8ED700D3257D /* Main.storyboard */; };
 		49368D821DCF8ED800D3257D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49368D811DCF8ED800D3257D /* Assets.xcassets */; };
@@ -21,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4902FFD41DD629C400E54871 /* PrayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrayTime.h; sourceTree = "<group>"; };
+		4902FFD51DD629F400E54871 /* Saba Center-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Saba Center-Bridging-Header.h"; sourceTree = "<group>"; };
+		4902FFD61DD629F500E54871 /* PrayTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayTime.m; sourceTree = "<group>"; };
+		492836301DD6431100909041 /* PrayerTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewController.swift; sourceTree = "<group>"; };
+		492836321DD7A17C00909041 /* PrayerTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimeModel.swift; sourceTree = "<group>"; };
 		49368D771DCF8ED500D3257D /* Saba Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saba Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49368D7A1DCF8ED600D3257D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49368D7F1DCF8ED700D3257D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4902FFD81DD62A1800E54871 /* PrayTime */ = {
+			isa = PBXGroup;
+			children = (
+				492836321DD7A17C00909041 /* PrayerTimeModel.swift */,
+				4902FFD41DD629C400E54871 /* PrayTime.h */,
+				4902FFD61DD629F500E54871 /* PrayTime.m */,
+				4902FFD51DD629F400E54871 /* Saba Center-Bridging-Header.h */,
+			);
+			name = PrayTime;
+			sourceTree = "<group>";
+		};
+		492836341DD7A49B00909041 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */,
+				49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */,
+				492836301DD6431100909041 /* PrayerTimesViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		492836351DD7A4EA00909041 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49368D991DD51D5400D3257D /* GCD.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		49368D6E1DCF8EC500D3257D = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +103,10 @@
 		49368D791DCF8ED500D3257D /* Saba Center */ = {
 			isa = PBXGroup;
 			children = (
+				492836351DD7A4EA00909041 /* Views */,
+				49368D8C1DCFF4DB00D3257D /* Models */,
+				492836341DD7A49B00909041 /* Controllers */,
 				49368D7A1DCF8ED600D3257D /* AppDelegate.swift */,
-				49368D991DD51D5400D3257D /* GCD.swift */,
-				49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */,
-				49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */,
-				49368D8C1DCFF4DB00D3257D /* Model */,
 				49368D7E1DCF8ED700D3257D /* Main.storyboard */,
 				49368D811DCF8ED800D3257D /* Assets.xcassets */,
 				49368D831DCF8ED800D3257D /* LaunchScreen.storyboard */,
@@ -79,17 +115,18 @@
 			path = "Saba Center";
 			sourceTree = "<group>";
 		};
-		49368D8C1DCFF4DB00D3257D /* Model */ = {
+		49368D8C1DCFF4DB00D3257D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				49368D8D1DCFF4E300D3257D /* Clients */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		49368D8D1DCFF4E300D3257D /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				4902FFD81DD62A1800E54871 /* PrayTime */,
 				49368D8E1DCFF4F000D3257D /* SabaGoogleDocs */,
 			);
 			name = Clients;
@@ -139,6 +176,7 @@
 					49368D761DCF8EC800D3257D = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 396S2E45WK;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -181,8 +219,11 @@
 			files = (
 				49368D9A1DD51D5400D3257D /* GCD.swift in Sources */,
 				49368D9C1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift in Sources */,
+				492836311DD6431100909041 /* PrayerTimesViewController.swift in Sources */,
+				4902FFD71DD629F500E54871 /* PrayTime.m in Sources */,
 				49368D981DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift in Sources */,
 				49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */,
+				492836331DD7A17C00909041 /* PrayerTimeModel.swift in Sources */,
 				49368D941DCFFC6B00D3257D /* GoogleDocsConvenience.swift in Sources */,
 				49368D7B1DCF8ED600D3257D /* AppDelegate.swift in Sources */,
 				49368D901DCFF54100D3257D /* GoogleDocsClient.swift in Sources */,
@@ -309,11 +350,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 396S2E45WK;
 				INFOPLIST_FILE = "Saba Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -322,11 +366,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 396S2E45WK;
 				INFOPLIST_FILE = "Saba Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
