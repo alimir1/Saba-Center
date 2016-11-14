@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import CoreLocation
 
 class PrayerTimesViewController: UITableViewController {
@@ -28,10 +29,12 @@ class PrayerTimesViewController: UITableViewController {
         }
     }
     
-    // MARK: - View Cycles
+    // MARK: - View Life Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        FIRMessaging.messaging().subscribe(toTopic: "/topics/news")
         
         startLocation()
     }
@@ -75,14 +78,14 @@ extension PrayerTimesViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "prayTimeCell", for: indexPath)
-        
         let prayTime = prayerTimes[indexPath.row]
-        cell.textLabel?.text = "\(prayTime.name)  :    \(prayTime.time)"
         
+        cell.textLabel?.text = "\(prayTime.name)"
+        cell.detailTextLabel?.text = "\(prayTime.time)"
+
         return cell
     }
 }
-
 
 // MARK: - CLLocationManager Delegates
 

@@ -107,10 +107,10 @@ class GoogleDocsClient: NSObject {
     
     // MARK: Shared Instance
     
-    class func sharedInstance() -> GoogleDocsClient {
+    class func shared() -> GoogleDocsClient {
         struct Singleton {
-            static var sharedInstance = GoogleDocsClient()
+            static var shared = GoogleDocsClient()
         }
-        return Singleton.sharedInstance
+        return Singleton.shared
     }
 }

@@ -10,6 +10,8 @@
 		4902FFD71DD629F500E54871 /* PrayTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4902FFD61DD629F500E54871 /* PrayTime.m */; };
 		492836311DD6431100909041 /* PrayerTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492836301DD6431100909041 /* PrayerTimesViewController.swift */; };
 		492836331DD7A17C00909041 /* PrayerTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492836321DD7A17C00909041 /* PrayerTimeModel.swift */; };
+		492836371DD7B23600909041 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 492836361DD7B23600909041 /* GoogleService-Info.plist */; };
+		492836391DDA2A7100909041 /* UpcomingProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492836381DDA2A7100909041 /* UpcomingProgramsViewController.swift */; };
 		49368D7B1DCF8ED600D3257D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D7A1DCF8ED600D3257D /* AppDelegate.swift */; };
 		49368D801DCF8ED700D3257D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49368D7E1DCF8ED700D3257D /* Main.storyboard */; };
 		49368D821DCF8ED800D3257D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49368D811DCF8ED800D3257D /* Assets.xcassets */; };
@@ -21,6 +23,7 @@
 		49368D981DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */; };
 		49368D9A1DD51D5400D3257D /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D991DD51D5400D3257D /* GCD.swift */; };
 		49368D9C1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */; };
+		94A9372DEF662ADC63FCD6BE /* Pods_Saba_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,8 @@
 		4902FFD61DD629F500E54871 /* PrayTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayTime.m; sourceTree = "<group>"; };
 		492836301DD6431100909041 /* PrayerTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewController.swift; sourceTree = "<group>"; };
 		492836321DD7A17C00909041 /* PrayerTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimeModel.swift; sourceTree = "<group>"; };
+		492836361DD7B23600909041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		492836381DDA2A7100909041 /* UpcomingProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingProgramsViewController.swift; sourceTree = "<group>"; };
 		49368D771DCF8ED500D3257D /* Saba Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saba Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49368D7A1DCF8ED600D3257D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49368D7F1DCF8ED700D3257D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +47,9 @@
 		49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsTableViewController.swift; sourceTree = "<group>"; };
 		49368D991DD51D5400D3257D /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsTableViewCell.swift; sourceTree = "<group>"; };
+		5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saba_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6AB722BB8D7EFAD34F5906 /* Pods-Saba Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.debug.xcconfig"; sourceTree = "<group>"; };
+		DB2A168F188672C3C446468C /* Pods-Saba Center.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A9372DEF662ADC63FCD6BE /* Pods_Saba_Center.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +78,9 @@
 		492836341DD7A49B00909041 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */,
 				49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */,
 				492836301DD6431100909041 /* PrayerTimesViewController.swift */,
+				492836381DDA2A7100909041 /* UpcomingProgramsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -79,7 +88,7 @@
 		492836351DD7A4EA00909041 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				49368D991DD51D5400D3257D /* GCD.swift */,
+				49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -89,6 +98,8 @@
 			children = (
 				49368D791DCF8ED500D3257D /* Saba Center */,
 				49368D781DCF8ED500D3257D /* Products */,
+				FD45A59329B8BA3DE79DA5A5 /* Pods */,
+				6939F8E49B716A9157CFF0E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,14 +114,16 @@
 		49368D791DCF8ED500D3257D /* Saba Center */ = {
 			isa = PBXGroup;
 			children = (
-				492836351DD7A4EA00909041 /* Views */,
-				49368D8C1DCFF4DB00D3257D /* Models */,
 				492836341DD7A49B00909041 /* Controllers */,
+				49368D8C1DCFF4DB00D3257D /* Models */,
+				492836351DD7A4EA00909041 /* Views */,
 				49368D7A1DCF8ED600D3257D /* AppDelegate.swift */,
+				49368D991DD51D5400D3257D /* GCD.swift */,
 				49368D7E1DCF8ED700D3257D /* Main.storyboard */,
 				49368D811DCF8ED800D3257D /* Assets.xcassets */,
 				49368D831DCF8ED800D3257D /* LaunchScreen.storyboard */,
 				49368D861DCF8ED900D3257D /* Info.plist */,
+				492836361DD7B23600909041 /* GoogleService-Info.plist */,
 			);
 			path = "Saba Center";
 			sourceTree = "<group>";
@@ -118,18 +131,10 @@
 		49368D8C1DCFF4DB00D3257D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				49368D8D1DCFF4E300D3257D /* Clients */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		49368D8D1DCFF4E300D3257D /* Clients */ = {
-			isa = PBXGroup;
-			children = (
 				4902FFD81DD62A1800E54871 /* PrayTime */,
 				49368D8E1DCFF4F000D3257D /* SabaGoogleDocs */,
 			);
-			name = Clients;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		49368D8E1DCFF4F000D3257D /* SabaGoogleDocs */ = {
@@ -143,6 +148,23 @@
 			name = SabaGoogleDocs;
 			sourceTree = "<group>";
 		};
+		6939F8E49B716A9157CFF0E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD45A59329B8BA3DE79DA5A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A6AB722BB8D7EFAD34F5906 /* Pods-Saba Center.debug.xcconfig */,
+				DB2A168F188672C3C446468C /* Pods-Saba Center.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49368D891DCF8ED900D3257D /* Build configuration list for PBXNativeTarget "Saba Center" */;
 			buildPhases = (
+				20ABA60BBEE9481D8B7576DC /* [CP] Check Pods Manifest.lock */,
 				49368D731DCF8EC800D3257D /* Sources */,
 				49368D741DCF8EC800D3257D /* Frameworks */,
 				49368D751DCF8EC800D3257D /* Resources */,
+				E87A791FD2ADC950D89EA230 /* [CP] Embed Pods Frameworks */,
+				A37EEF43E51FFAC5D1DF3C31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,12 +230,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				49368D851DCF8ED800D3257D /* LaunchScreen.storyboard in Resources */,
+				492836371DD7B23600909041 /* GoogleService-Info.plist in Resources */,
 				49368D821DCF8ED800D3257D /* Assets.xcassets in Resources */,
 				49368D801DCF8ED700D3257D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20ABA60BBEE9481D8B7576DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A37EEF43E51FFAC5D1DF3C31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E87A791FD2ADC950D89EA230 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49368D731DCF8EC800D3257D /* Sources */ = {
@@ -220,6 +294,7 @@
 				49368D9A1DD51D5400D3257D /* GCD.swift in Sources */,
 				49368D9C1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift in Sources */,
 				492836311DD6431100909041 /* PrayerTimesViewController.swift in Sources */,
+				492836391DDA2A7100909041 /* UpcomingProgramsViewController.swift in Sources */,
 				4902FFD71DD629F500E54871 /* PrayTime.m in Sources */,
 				49368D981DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift in Sources */,
 				49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */,
@@ -348,6 +423,7 @@
 		};
 		49368D8A1DCF8ED900D3257D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A6AB722BB8D7EFAD34F5906 /* Pods-Saba Center.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -364,6 +440,7 @@
 		};
 		49368D8B1DCF8ED900D3257D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB2A168F188672C3C446468C /* Pods-Saba Center.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
