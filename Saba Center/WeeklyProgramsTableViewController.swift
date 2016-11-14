@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import PrayTime
 
 class WeeklyProgramsTableViewController: UITableViewController {
     

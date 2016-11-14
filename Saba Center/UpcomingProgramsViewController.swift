@@ -25,42 +25,66 @@ class UpcomingProgramsViewController: UITableViewController {
         }
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table view
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return upcomingPrograms.count
     }
-
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingProgramCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingProgramCell", for: indexPath) as! UpcomingProgramsCell
         
         let upcomingProgram = upcomingPrograms[indexPath.row]
         
-        let title = upcomingProgram.title
-        let description = upcomingProgram.description
-        let imageURL = upcomingProgram.imageURL
+        cell.upcomingProgramText.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
         
-        cell.textLabel?.text = title
-        cell.detailTextLabel?.text = description ?? ""
-        
-        if let imageURL = imageURL {
-            let url = URL(string: imageURL)
-            DispatchQueue.global().async {
-                if let url = url {
-                    if let data = try? Data(contentsOf: url) {
-                        performUIUpdatesOnMain {
-                            cell.imageView?.image = UIImage(data: data)
-                        }
-                    }
-                }
-            }
-        }
-
         return cell
     }
- 
+    
+    func makeAttributedString(title: String, subtitle: String) -> NSAttributedString {
+//        let titleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .headline)]
+//        let subtitleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .subheadline)]
+        
+        let title = try! NSMutableAttributedString(
+            data: title.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
+            options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+            documentAttributes: nil)
+        
+        let description = try! NSAttributedString(
+            data: subtitle.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
+            options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+            documentAttributes: nil)
+        
+        title.append(NSAttributedString(string: "\n"))
+        title.append(description)
+        
+        return title
+    }
+    
+}
 
+extension Data {
+    var attributedString: NSAttributedString? {
+        do {
+            return try NSAttributedString(data: self, options:[NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+}
+extension String {
+    var utf8Data: Data? {
+        return data(using: .utf8)
+    }
 }
 
 // MARK: - Helpers
@@ -74,7 +98,6 @@ extension UpcomingProgramsViewController {
             } else {
                 // FIXME: ERROR HANDLING!
             }
-            
         }
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2016 com.AliMir. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - GoogleDocsClient (Convenient Resource Methods)
 
@@ -27,10 +27,8 @@ extension GoogleDocsClient {
                     var upcomingPrograms: [SabaCenterData.UpcomingProgram] = []
                     
                     for e in entry {
-                        if let title = (e[GoogleDocsClient.JSONResponseKeys.Title] as? [String : String])?[GoogleDocsClient.JSONResponseKeys.Text] {
-                            let description = (e[GoogleDocsClient.JSONResponseKeys.Description] as? [String : String])?[GoogleDocsClient.JSONResponseKeys.Text]
+                        if let title = (e[GoogleDocsClient.JSONResponseKeys.Title] as? [String : String])?[GoogleDocsClient.JSONResponseKeys.Text], let description = (e[GoogleDocsClient.JSONResponseKeys.Description] as? [String : String])?[GoogleDocsClient.JSONResponseKeys.Text] {
                             let imageURL = (e[GoogleDocsClient.JSONResponseKeys.ImageURL] as? [String : String])?[GoogleDocsClient.JSONResponseKeys.Text]
-                            
                             let upcomingProgram = SabaCenterData.UpcomingProgram(title: title, description: description, imageURL: imageURL)
                             
                             // add it to the array

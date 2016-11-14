@@ -7,52 +7,45 @@
 //
 
 import UIKit
-import Firebase
-import UserNotifications
+//import Firebase
+//import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, FIRMessagingDelegate {
+//class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, FIRMessagingDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        // Configure Firebase
-        FIRApp.configure()
-        
-        if #available(iOS 10.0, *) {
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-            UNUserNotificationCenter.current().requestAuthorization(
-                options: authOptions,
-                completionHandler: {_, _ in })
-            
-            // For iOS 10 display notification (sent via APNS)
-            UNUserNotificationCenter.current().delegate = self
-            // For iOS 10 data message (sent via FCM)
-            FIRMessaging.messaging().remoteMessageDelegate = self
-            
-        } else {
-            let settings: UIUserNotificationSettings =
-                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-        }
-        
-        application.registerForRemoteNotifications()
+//        // Configure Firebase
+//        FIRApp.configure()
+//        
+//        if #available(iOS 10.0, *) {
+//            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+//            UNUserNotificationCenter.current().requestAuthorization(
+//                options: authOptions,
+//                completionHandler: {_, _ in })
+//            
+//            // For iOS 10 display notification (sent via APNS)
+//            UNUserNotificationCenter.current().delegate = self
+//            // For iOS 10 data message (sent via FCM)
+//            FIRMessaging.messaging().remoteMessageDelegate = self
+//            
+//        } else {
+//            let settings: UIUserNotificationSettings =
+//                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+//            application.registerUserNotificationSettings(settings)
+//        }
+//        
+//        application.registerForRemoteNotifications()
         
         
         return true
     }
     
     /// The callback to handle data message received via FCM for devices running iOS 10 or above.
-    public func applicationReceivedRemoteMessage(_ remoteMessage: FIRMessagingRemoteMessage) {
-        
-    }
-    
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-//        
-//    }
-//    
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//    public func applicationReceivedRemoteMessage(_ remoteMessage: FIRMessagingRemoteMessage) {
 //        
 //    }
     

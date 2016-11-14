@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 import CoreLocation
 
 class PrayerTimesViewController: UITableViewController {
@@ -34,7 +34,7 @@ class PrayerTimesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FIRMessaging.messaging().subscribe(toTopic: "/topics/news")
+//        FIRMessaging.messaging().subscribe(toTopic: "/topics/news")
         
         startLocation()
     }

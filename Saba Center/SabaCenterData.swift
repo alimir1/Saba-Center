@@ -6,12 +6,12 @@
 //  Copyright © 2016 com.AliMir. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct SabaCenterData {
     struct UpcomingProgram {
         let title: String
-        let description: String?
+        let description: String
         let imageURL: String?
     }
     
