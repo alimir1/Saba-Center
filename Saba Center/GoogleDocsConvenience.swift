@@ -45,17 +45,18 @@ extension GoogleDocsClient {
         }
     }
     
-    func getWeeklyPrograms(completionHandler: @escaping (_ data: [SabaCenterData.WeeklyProgram]?, _ error: Error?) -> Void) {
+    func getWeeklyPrograms(completionHandler: @escaping (_ data: [SabaCenterData.WeeklyProgram], _ error: Error?) -> Void) {
     
         _ = taskForGETMethod(sectionCode: GoogleDocsClient.SectionCodes.WeeklyPrograms) {
             (result, error) in
             
+            var weeklyPrograms: [SabaCenterData.WeeklyProgram] = []
+            
             if let error = error {
-                completionHandler(nil, error)
+                completionHandler(weeklyPrograms, error)
             } else {
                 if let data = result as? [String : AnyObject], let feed = data[GoogleDocsClient.JSONResponseKeys.Feed] as? [String : AnyObject], let entry = feed[GoogleDocsClient.JSONResponseKeys.Entry] as? [[String : AnyObject]] {
                     
-                    var weeklyPrograms: [SabaCenterData.WeeklyProgram] = []
                     var count = -1
                     
                     for e in entry {
@@ -79,7 +80,7 @@ extension GoogleDocsClient {
                     completionHandler(weeklyPrograms, nil)
                     
                 } else {
-                    completionHandler(nil, NSError(domain: "getWeeklyPrograms parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse data getWeeklyPrograms"]))
+                    completionHandler(weeklyPrograms, NSError(domain: "getWeeklyPrograms parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse data getWeeklyPrograms"]))
                 
                 }
             }
