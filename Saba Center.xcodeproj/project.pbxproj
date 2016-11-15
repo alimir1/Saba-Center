@@ -20,11 +20,12 @@
 		49368D921DCFF59900D3257D /* GoogleDocsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D911DCFF59900D3257D /* GoogleDocsConstants.swift */; };
 		49368D941DCFFC6B00D3257D /* GoogleDocsConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D931DCFFC6B00D3257D /* GoogleDocsConvenience.swift */; };
 		49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D951DCFFDC700D3257D /* SabaCenterData.swift */; };
-		49368D981DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */; };
 		49368D9A1DD51D5400D3257D /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D991DD51D5400D3257D /* GCD.swift */; };
 		49368D9C1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */; };
 		49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */; };
-		49C571AE1DDA7C7A008C9558 /* WeeklyProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571AD1DDA7C7A008C9558 /* WeeklyProgramsViewController.swift */; };
+		49C571B41DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B31DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift */; };
+		49C571B61DDAA484008C9558 /* WeeklyProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */; };
+		49C571BA1DDAB00C008C9558 /* PageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B91DDAB00C008C9558 /* PageTestViewController.swift */; };
 		94A9372DEF662ADC63FCD6BE /* Pods_Saba_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +47,12 @@
 		49368D911DCFF59900D3257D /* GoogleDocsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDocsConstants.swift; sourceTree = "<group>"; };
 		49368D931DCFFC6B00D3257D /* GoogleDocsConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDocsConvenience.swift; sourceTree = "<group>"; };
 		49368D951DCFFDC700D3257D /* SabaCenterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SabaCenterData.swift; sourceTree = "<group>"; };
-		49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsTableViewController.swift; sourceTree = "<group>"; };
 		49368D991DD51D5400D3257D /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsTableViewCell.swift; sourceTree = "<group>"; };
 		49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingProgramsCell.swift; sourceTree = "<group>"; };
-		49C571AD1DDA7C7A008C9558 /* WeeklyProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsViewController.swift; sourceTree = "<group>"; };
+		49C571B31DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysOfWeekCollectionCellCell.swift; sourceTree = "<group>"; };
+		49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsViewController.swift; sourceTree = "<group>"; };
+		49C571B91DDAB00C008C9558 /* PageTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTestViewController.swift; sourceTree = "<group>"; };
 		5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saba_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6AB722BB8D7EFAD34F5906 /* Pods-Saba Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2A168F188672C3C446468C /* Pods-Saba Center.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,8 +84,8 @@
 		492836341DD7A49B00909041 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				49368D971DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift */,
-				49C571AD1DDA7C7A008C9558 /* WeeklyProgramsViewController.swift */,
+				49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */,
+				49C571B91DDAB00C008C9558 /* PageTestViewController.swift */,
 				492836301DD6431100909041 /* PrayerTimesViewController.swift */,
 				492836381DDA2A7100909041 /* UpcomingProgramsViewController.swift */,
 			);
@@ -95,6 +97,7 @@
 			children = (
 				49368D9B1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift */,
 				49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */,
+				49C571B31DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -297,13 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49C571AE1DDA7C7A008C9558 /* WeeklyProgramsViewController.swift in Sources */,
 				49368D9A1DD51D5400D3257D /* GCD.swift in Sources */,
+				49C571B41DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift in Sources */,
 				49368D9C1DD5212F00D3257D /* WeeklyProgramsTableViewCell.swift in Sources */,
 				492836311DD6431100909041 /* PrayerTimesViewController.swift in Sources */,
 				492836391DDA2A7100909041 /* UpcomingProgramsViewController.swift in Sources */,
+				49C571B61DDAA484008C9558 /* WeeklyProgramsViewController.swift in Sources */,
 				4902FFD71DD629F500E54871 /* PrayTime.m in Sources */,
-				49368D981DD51C4A00D3257D /* WeeklyProgramsTableViewController.swift in Sources */,
+				49C571BA1DDAB00C008C9558 /* PageTestViewController.swift in Sources */,
 				49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */,
 				49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */,
 				492836331DD7A17C00909041 /* PrayerTimeModel.swift in Sources */,

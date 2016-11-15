@@ -9,10 +9,4 @@
 import UIKit
 
 class WeeklyProgramsTableViewCell: UITableViewCell {
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var detail: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }

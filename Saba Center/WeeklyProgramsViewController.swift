@@ -8,88 +8,80 @@
 
 import UIKit
 
-class WeeklyProgramsViewController: UITableViewController {
+private let reuseIdentifier = "daysOfWeekCollectionCell"
 
+class WeeklyProgramsViewController: UIViewController {
+    var weeklyPrograms: [SabaCenterData.WeeklyProgram] = []
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var testDay: [SabaCenterData.Schedule]? {
+        return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let one = SabaCenterData.WeeklyProgram(day: "Monday", englishDate: "32/23", hijriDate: "tse", schedules: [SabaCenterData.Schedule(time: "33:44", program: "SomeProgram")])
+        let two = SabaCenterData.WeeklyProgram(day: "Friday", englishDate: "32/23", hijriDate: "tse", schedules: [SabaCenterData.Schedule(time: "33:44", program: "SomeProgram")])
+        let three = SabaCenterData.WeeklyProgram(day: "Tuesday", englishDate: "32/23", hijriDate: "tse", schedules: [SabaCenterData.Schedule(time: "33:44", program: "SomeProgram")])
+        let four = SabaCenterData.WeeklyProgram(day: "Wednesday", englishDate: "32/23", hijriDate: "tse", schedules: [SabaCenterData.Schedule(time: "33:44", program: "SomeProgram")])
+        let five = SabaCenterData.WeeklyProgram(day: "Thursday", englishDate: "32/23", hijriDate: "tse", schedules: [SabaCenterData.Schedule(time: "33:44", program: "SomeProgram")])
+        
+        weeklyPrograms.append(one)
+        weeklyPrograms.append(two)
+        weeklyPrograms.append(three)
+        weeklyPrograms.append(four)
+        weeklyPrograms.append(five)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - Helpers
+
+extension WeeklyProgramsViewController {
+}
+
+// MARK: - Table View
+
+extension WeeklyProgramsViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return testDay?.count ?? 0
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "weeklyProgramCell", for: indexPath) as! WeeklyProgramsTableViewCell
+        let schedule = testDay?[indexPath.row]
+        
+        cell.textLabel?.text = schedule?.time
+        cell.detailTextLabel?.text = schedule?.program
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+// MARK: - CollectionView
+
+extension WeeklyProgramsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DaysOfWeekCollectionCellCell
+        let dayOfWeek = weeklyPrograms[indexPath.row].day
+        cell.dayOfWeek.setTitle(dayOfWeek, for: .normal)
+        
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return weeklyPrograms.count
+    }
+}
+
