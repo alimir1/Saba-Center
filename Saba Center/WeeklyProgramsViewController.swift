@@ -42,7 +42,7 @@ extension WeeklyProgramsViewController {
             documentAttributes: nil)
         
         cell.textLabel?.text = schedule.time
-        cell.detailTextLabel?.attributedText = program
+        cell.detailTextLabel?.text = program.string
         
         return cell
     }

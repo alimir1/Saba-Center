@@ -31,7 +31,6 @@ extension GoogleDocsClient {
                             let imageURL = (e[GoogleDocsClient.JSONResponseKeys.ImageURL] as? [String : String])?[GoogleDocsClient.JSONResponseKeys.Text]
                             let upcomingProgram = SabaCenterData.UpcomingProgram(title: title, description: description, imageURL: imageURL)
                             
-                            // add it to the array
                             upcomingPrograms.append(upcomingProgram)
                         }
                     }

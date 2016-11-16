@@ -52,7 +52,7 @@ extension PageMenuViewController {
         for program in weeklyPrograms {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewCtrl = storyboard.instantiateViewController(withIdentifier: "weeklyPrograms") as! WeeklyProgramsViewController
-            viewCtrl.title = program.day
+            viewCtrl.title = SabaCenterData.WeeklyProgram.DaysOfTheWeek(rawValue: program.day)?.getAbbreviatedDayString ?? program.day
             for schedule in program.schedules {
                 if schedule.time != "<br>" {
                     viewCtrl.timeTable.append(schedule)
@@ -73,7 +73,6 @@ extension PageMenuViewController {
         
         // Initialize page menu with controller array, frame, and optional parameters
         
-//        let navheight = (navigationController?.navigationBar.frame.size.height ?? 0) + UIApplication.shared.statusBarFrame.size.height
         let frame = CGRect(x: 0.0, y: 0.0, width: containerView.frame.width, height: containerView.frame.height)
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: frame, pageMenuOptions: parameters)
         

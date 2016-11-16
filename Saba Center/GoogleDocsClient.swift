@@ -90,9 +90,10 @@ class GoogleDocsClient: NSObject {
     }
     
     // given raw JSON, return a usable Foundation object
-    func convertDataWithCompletionHandler(data: Data, completionHandlerForConvertData: (_ result: AnyObject?, _ error: NSError?) -> Void) {
+    func convertDataWithCompletionHandler(data: Data, completionHandlerForConvertData: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) {
         
         var parsedResult: AnyObject!
+        
         do {
             parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as AnyObject
         } catch {
@@ -102,7 +103,12 @@ class GoogleDocsClient: NSObject {
             return
         }
         
-        completionHandlerForConvertData(parsedResult, nil)
+        DispatchQueue.global(qos: DispatchQoS.background.qosClass).async {
+            performUIUpdatesOnMain {
+                completionHandlerForConvertData(parsedResult, nil)
+            }
+        }
+        
     }
     
     // MARK: Shared Instance

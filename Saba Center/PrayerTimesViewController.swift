@@ -32,7 +32,6 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
         startLocation()
     }
 
@@ -52,8 +51,9 @@ extension PrayerTimesViewController {
 
 extension PrayerTimesViewController {
     func startLocation() {
+        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
+        locationManager.startUpdatingLocation()
     }
     
     func configurePrayerTimes() -> PrayTime {
@@ -123,6 +123,9 @@ extension PrayerTimesViewController {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.delegate = nil
+        locationManager.stopUpdatingLocation()
+        
         if let userCoordinates = manager.location?.coordinate {
             self.userLocation = userCoordinates
             print("user location: \(userCoordinates)")
@@ -138,10 +141,6 @@ extension PrayerTimesViewController {
             alertCtrl.addAction(tryAgainAction)
             present(alertCtrl, animated: true, completion: nil)
         }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // FIXME: - error handling...
     }
 }
 

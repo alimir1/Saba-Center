@@ -18,6 +18,8 @@ class UpcomingProgramsViewController: UITableViewController {
         }
     }
     
+    var imageCache = [URL : UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         performUIUpdatesOnMain() {
@@ -46,47 +48,22 @@ class UpcomingProgramsViewController: UITableViewController {
         
         cell.upcomingProgramText.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
         
-        
-        
         cell.programImage.image = #imageLiteral(resourceName: "PlaceHolder")
-        let url = URL(string: upcomingProgram.imageURL!)!
-        let task = URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            if let imageData = data {
-                let image = UIImage(data: imageData)
-                if let image = image {
-                    performUIUpdatesOnMain {
-                        let updateCell = self.tableView.cellForRow(at: indexPath)
-                        if let updatedCell = updateCell as? UpcomingProgramsCell {
-                            updatedCell.programImage.image = image
-                            self.tableView.reloadRows(at: [indexPath], with: .none)
+        if let imageurl = URL(string: upcomingProgram.imageURL!) {
+            if let img = imageCache[imageurl] {
+                cell.programImage.image = img
+            } else {
+                if let data = try? Data(contentsOf: imageurl) {
+                    if let image = UIImage(data: data) {
+                        imageCache[imageurl] = image
+                        performUIUpdatesOnMain {
+                            cell.programImage.image = image
                         }
                     }
                 }
             }
-            
         }
-        task.resume()
-        
-//        cell.programImage.image = #imageLiteral(resourceName: "PlaceHolder")
-//        
-//        DispatchQueue.global(qos: DispatchQoS.background.qosClass).async {
-//            do {
-//                let data = try Data(contentsOf: URL(string: upcomingProgram.imageURL!)!)
-//                let getImage = UIImage(data: data)
-//                DispatchQueue.main.async {
-//                    let updateCell = self.tableView.cellForRow(at: indexPath) as? UpcomingProgramsCell
-//                    if let updatedCell = updateCell {
-//                        updatedCell.programImage.image = getImage
-//                    }
-//                    return
-//                }
-//            }
-//            catch {
-//                return
-//            }
-//        }
-        
+
         return cell
     }
     
@@ -122,6 +99,7 @@ extension Data {
         return nil
     }
 }
+
 extension String {
     var utf8Data: Data? {
         return data(using: .utf8)
