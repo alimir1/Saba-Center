@@ -7,10 +7,9 @@
 //
 
 import UIKit
-//import Firebase
 import CoreLocation
 
-class PrayerTimesViewController: UITableViewController {
+class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegate {
     
     // MARK: - Properties
     
@@ -33,20 +32,28 @@ class PrayerTimesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        FIRMessaging.messaging().subscribe(toTopic: "/topics/news")
-        
+        locationManager.delegate = self
         startLocation()
     }
 
+}
+
+// MARK: - Actions
+
+extension PrayerTimesViewController {
+    @IBAction func refreshTable(sender: AnyObject?) {
+        prayerTimes.removeAll()
+        self.tableView.reloadData()
+        startLocation()
+    }
 }
 
 // MARK: - Helpers
 
 extension PrayerTimesViewController {
     func startLocation() {
-        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
     }
     
     func configurePrayerTimes() -> PrayTime {
@@ -59,6 +66,7 @@ extension PrayerTimesViewController {
     
     func getPrayerTimes(coordinates: CLLocationCoordinate2D) {
         let dateComponents = Calendar(identifier: .gregorian).dateComponents(in: TimeZone.current, from: Date())
+        
         let prayerTimeNames = PrayTime().timeNames as AnyObject as! [String]
         
         let prayerTimeTimes = configurePrayerTimes().getPrayerTimes(dateComponents, andLatitude: coordinates.latitude, andLongitude: coordinates.longitude, andtimeZone: PrayTime().getZone()) as AnyObject as! [String]
@@ -89,11 +97,11 @@ extension PrayerTimesViewController {
 
 // MARK: - CLLocationManager Delegates
 
-extension PrayerTimesViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+extension PrayerTimesViewController {
+    @objc(locationManager:didChangeAuthorizationStatus:) func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.startUpdatingLocation()
+            locationManager.requestLocation()
         case .notDetermined:
             manager.requestWhenInUseAuthorization()
         case .restricted, .denied:
@@ -115,8 +123,6 @@ extension PrayerTimesViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.locationManager.stopUpdatingLocation()
-        manager.delegate = nil
         if let userCoordinates = manager.location?.coordinate {
             self.userLocation = userCoordinates
             print("user location: \(userCoordinates)")
@@ -132,6 +138,10 @@ extension PrayerTimesViewController: CLLocationManagerDelegate {
             alertCtrl.addAction(tryAgainAction)
             present(alertCtrl, animated: true, completion: nil)
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // FIXME: - error handling...
     }
 }
 

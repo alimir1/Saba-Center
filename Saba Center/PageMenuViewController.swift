@@ -1,5 +1,5 @@
 //
-//  TestViewController.swift
+//  PageMenuViewController.swift
 //  Saba Center
 //
 //  Created by Ali Mir on 11/15/16.
@@ -9,7 +9,10 @@
 import UIKit
 import PageMenu
 
-class TestViewController: UIViewController {
+class PageMenuViewController: UIViewController {
+    
+    @IBOutlet weak var containerView: UIView!
+    
     var weeklyPrograms: [SabaCenterData.WeeklyProgram] = [] {
         didSet {
             populateViewControllers()
@@ -33,7 +36,7 @@ class TestViewController: UIViewController {
 
 // MARK: - Helpers
 
-extension TestViewController {
+extension PageMenuViewController {
     func fetchWeeklyPrograms() {
         GoogleDocsClient.shared().getWeeklyPrograms() {
             (data, error) in
@@ -70,13 +73,14 @@ extension TestViewController {
         
         // Initialize page menu with controller array, frame, and optional parameters
         
-        let navheight = (navigationController?.navigationBar.frame.size.height ?? 0) + UIApplication.shared.statusBarFrame.size.height
-        let frame = CGRect(x: 0.0, y: navheight, width: self.view.frame.width, height: self.view.frame.height)
+//        let navheight = (navigationController?.navigationBar.frame.size.height ?? 0) + UIApplication.shared.statusBarFrame.size.height
+        let frame = CGRect(x: 0.0, y: 0.0, width: containerView.frame.width, height: containerView.frame.height)
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: frame, pageMenuOptions: parameters)
         
         // Lastly add page menu as subview of base view controller view
         // or use pageMenu controller in you view hierachy as desired
-        self.view.addSubview(pageMenu!.view)
+//        self.view.addSubview(pageMenu!.view)
+        containerView.addSubview(pageMenu!.view)
     }
 }
 

@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qkz-cZ-5qL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o56-Iv-etk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Upcoming Programs View Controller-->
+        <!--Saba Center-->
         <scene sceneID="FIA-Dn-2fQ">
             <objects>
                 <tableViewController id="dOL-im-L4b" customClass="UpcomingProgramsViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="oMI-L1-n9v">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="oMI-L1-n9v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="upcomingProgramCell" id="bzs-XN-3c6" customClass="UpcomingProgramsCell" customModule="Saba_Center" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bzs-XN-3c6" id="Zab-8g-yxJ">
-                                    <frame key="frameInset" width="375" height="70"/>
+                                    <frame key="frameInset" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FXE-c0-tdO">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGJ-tN-SLe">
+                                            <frame key="frameInset" minX="8" minY="8" width="84" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FXE-c0-tdO">
+                                            <frame key="frameInset" minX="100" minY="8" width="267" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -31,14 +38,9 @@
                                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                         </textView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="FXE-c0-tdO" firstAttribute="top" secondItem="Zab-8g-yxJ" secondAttribute="topMargin" id="EvJ-Wg-jTx"/>
-                                        <constraint firstItem="FXE-c0-tdO" firstAttribute="trailing" secondItem="Zab-8g-yxJ" secondAttribute="trailingMargin" id="Idg-KW-HHQ"/>
-                                        <constraint firstItem="FXE-c0-tdO" firstAttribute="leading" secondItem="Zab-8g-yxJ" secondAttribute="leadingMargin" id="aWd-yw-gtf"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="FXE-c0-tdO" secondAttribute="bottom" id="fTz-hf-NAF"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="programImage" destination="KGJ-tN-SLe" id="Lc8-6n-gY8"/>
                                     <outlet property="upcomingProgramText" destination="FXE-c0-tdO" id="1LR-Bb-uhw"/>
                                 </connections>
                             </tableViewCell>
@@ -48,17 +50,17 @@
                             <outlet property="delegate" destination="dOL-im-L4b" id="2tf-gp-ni6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uRu-vZ-huY"/>
+                    <navigationItem key="navigationItem" title="Saba Center" id="uRu-vZ-huY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdi-5V-oUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="748.87556221889065"/>
+            <point key="canvasLocation" x="-1535.2" y="739.88005997001505"/>
         </scene>
-        <!--Prayer Times View Controller-->
+        <!--Prayer Times-->
         <scene sceneID="621-K0-5Xs">
             <objects>
                 <tableViewController storyboardIdentifier="prayerTimesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T53-WA-JrN" customClass="PrayerTimesViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IuO-AS-NS1">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IuO-AS-NS1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,16 +95,43 @@
                             <outlet property="delegate" destination="T53-WA-JrN" id="PkN-Iw-AI6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="P22-nr-NTj"/>
+                    <navigationItem key="navigationItem" title="Prayer Times" id="P22-nr-NTj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="i0T-cW-2nv">
+                            <connections>
+                                <action selector="refreshTableWithSender:" destination="T53-WA-JrN" id="OoY-oJ-S3p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcy-AJ-Ixv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="748.87556221889065"/>
+            <point key="canvasLocation" x="-1335" y="-31"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="yL7-CK-4An">
+            <objects>
+                <tabBarController id="o56-Iv-etk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="UnH-EN-DGf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cQW-tC-6dz" kind="relationship" relationship="viewControllers" id="6oJ-nG-505"/>
+                        <segue destination="Qkz-cZ-5qL" kind="relationship" relationship="viewControllers" id="byY-Eb-5w5"/>
+                        <segue destination="ose-Pc-cRH" kind="relationship" relationship="viewControllers" id="NSB-TU-ub1"/>
+                        <segue destination="ib8-eB-XE4" kind="relationship" relationship="viewControllers" id="3PQ-aR-vR5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G47-BQ-rfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3888" y="1212"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="8Xa-IA-Wkd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cQW-tC-6dz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="ZAu-fI-bj9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3sE-E3-nr2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -115,13 +144,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHU-kj-hw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567.20000000000005" y="748.87556221889065"/>
+            <point key="canvasLocation" x="-2473" y="739"/>
         </scene>
-        <!--Test View Controller-->
+        <!--Schedules-->
         <scene sceneID="Zn9-i1-4l3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sUf-gY-R4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="RVK-ez-ZFk" customClass="TestViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RVK-ez-ZFk" customClass="PageMenuViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RD2-c6-Tz1"/>
                         <viewControllerLayoutGuide type="bottom" id="Jz5-xd-vb4"/>
@@ -129,27 +157,44 @@
                     <view key="view" contentMode="scaleToFill" id="hvw-Hr-D2D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfN-04-axV">
+                                <connections>
+                                    <segue destination="aWe-Di-ynS" kind="embed" id="h4T-Us-k7f"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jz5-xd-vb4" firstAttribute="top" secondItem="WfN-04-axV" secondAttribute="bottom" id="Tqn-H5-Ufc"/>
+                            <constraint firstAttribute="trailing" secondItem="WfN-04-axV" secondAttribute="trailing" id="bcn-Yw-FCc"/>
+                            <constraint firstItem="WfN-04-axV" firstAttribute="leading" secondItem="hvw-Hr-D2D" secondAttribute="leading" id="pbT-aW-3DX"/>
+                            <constraint firstItem="WfN-04-axV" firstAttribute="top" secondItem="RD2-c6-Tz1" secondAttribute="bottom" id="qHd-gl-XgI"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1wq-yA-xyW"/>
+                    <navigationItem key="navigationItem" title="Schedules" id="1wq-yA-xyW"/>
+                    <connections>
+                        <outlet property="containerView" destination="WfN-04-axV" id="A0j-fU-Zjm"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUf-gY-R4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="1704"/>
+            <point key="canvasLocation" x="-1948" y="1595.352323838081"/>
         </scene>
         <!--Weekly Programs View Controller-->
         <scene sceneID="xns-T1-qhC">
             <objects>
-                <tableViewController storyboardIdentifier="weeklyPrograms" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aWe-Di-ynS" customClass="WeeklyProgramsViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KyT-fN-pzk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController storyboardIdentifier="weeklyPrograms" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aWe-Di-ynS" customClass="WeeklyProgramsViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KyT-fN-pzk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="weeklyProgramCell" textLabel="3wE-BV-ACd" detailTextLabel="1Mt-Mn-Ryc" style="IBUITableViewCellStyleValue2" id="85f-mO-4gI">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="85f-mO-4gI" id="1dQ-C8-Q3z">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3wE-BV-ACd">
@@ -159,7 +204,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Mt-Mn-Ryc">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Mt-Mn-Ryc">
                                             <frame key="frameInset" minX="112" minY="14" width="35" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -179,12 +224,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdz-iU-9ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2686" y="1703"/>
+            <point key="canvasLocation" x="-1119" y="1595"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Pray Times-->
         <scene sceneID="wjI-mN-Y1H">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ose-Pc-cRH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pray Times" image="PrayerTime" selectedImage="PrayerTime" id="hFY-wm-4kH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gb4-fP-Zof">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -197,13 +243,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGl-qx-a7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472.8" y="748.87556221889065"/>
+            <point key="canvasLocation" x="-2407" y="-31"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Schedules-->
         <scene sceneID="pJS-6p-TXZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3ok-Bo-05D" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qkz-cZ-5qL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedules" image="Schedule" selectedImage="Schedule" id="xI9-h3-11k"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WXd-p7-BHF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -214,26 +260,413 @@
                         <segue destination="RVK-ez-ZFk" kind="relationship" relationship="rootViewController" id="Gpc-Hm-X9Y"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ok-Bo-05D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-425" y="1704"/>
+            <point key="canvasLocation" x="-2887" y="1596"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cHp-Dx-XLd">
+        <!--More-->
+        <scene sceneID="M8f-cj-IDZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k9f-gb-bGM" sceneMemberID="viewController">
+                <tableViewController id="isR-gN-DPs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vwr-S7-VWx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="3ji-Me-ZrZ">
+                            <rect key="frame" x="0.0" y="240" width="375" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="tUl-wY-wKV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="uup-kH-vcL" imageView="dh5-Aj-66p" style="IBUITableViewCellStyleDefault" id="YWm-pA-tqm">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YWm-pA-tqm" id="8EP-z4-GbU">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uup-kH-vcL">
+                                                    <frame key="frameInset" minX="55" width="305" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Info" id="dh5-Aj-66p">
+                                                    <frame key="frameInset" minX="15" minY="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="AJX-Mv-dTY" kind="show" id="fMe-JE-QeL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="gPV-aB-L5b" imageView="9fN-GG-FrJ" style="IBUITableViewCellStyleDefault" id="AzB-zs-1bZ">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AzB-zs-1bZ" id="1wT-aK-AvF">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gPV-aB-L5b">
+                                                    <frame key="frameInset" minX="55" width="305" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Map" id="9fN-GG-FrJ">
+                                                    <frame key="frameInset" minX="15" minY="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="V76-RT-Kb1" imageView="TC5-1G-uEo" style="IBUITableViewCellStyleDefault" id="CHe-EL-8Xd">
+                                        <rect key="frame" x="0.0" y="152" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CHe-EL-8Xd" id="QcV-z5-Pxv">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V76-RT-Kb1">
+                                                    <frame key="frameInset" minX="55" width="305" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Share" id="TC5-1G-uEo">
+                                                    <frame key="frameInset" minX="15" minY="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="y0L-uA-TKD" imageView="THy-kH-PMF" style="IBUITableViewCellStyleDefault" id="qdC-kQ-kIJ">
+                                        <rect key="frame" x="0.0" y="196" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qdC-kQ-kIJ" id="Oyr-fA-AgB">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contribute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y0L-uA-TKD">
+                                                    <frame key="frameInset" minX="55" width="305" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Contribute" id="THy-kH-PMF">
+                                                    <frame key="frameInset" minX="15" minY="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="isR-gN-DPs" id="hk0-e5-OZN"/>
+                            <outlet property="delegate" destination="isR-gN-DPs" id="Jd8-7i-X3J"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="More" id="Loi-UW-mhM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUO-Ym-Jpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2295.1999999999998" y="2473.313343328336"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="5Zt-Xo-gtc">
+            <objects>
+                <tableViewController title="About" id="AJX-Mv-dTY" customClass="AboutTableViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ONo-hY-Jyd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="gMK-fn-Ps6">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="292" id="7AQ-Ww-h7A">
+                                        <rect key="frame" x="0.0" y="99" width="375" height="292"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7AQ-Ww-h7A" id="G4j-cL-BoE">
+                                            <frame key="frameInset" width="375" height="292"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sabaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-AK-zfq"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dm-76-B8t">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="102" id="jpl-Z3-fZu"/>
+                                                    </constraints>
+                                                    <string key="text">SABA Center is a multicultural Islamic Center under the guidance of Sayyid Nabi Raza Abidi. Located in the SF Bay Area, SABA seeks to spread the message of Ahlul Bayt and provide a multilingual platform for Muslims all over the bay.</string>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VFM-AK-zfq" firstAttribute="top" secondItem="G4j-cL-BoE" secondAttribute="topMargin" constant="21" id="9vV-5B-DBb"/>
+                                                <constraint firstItem="VFM-AK-zfq" firstAttribute="centerX" secondItem="5Dm-76-B8t" secondAttribute="centerX" id="d9g-gG-bIU"/>
+                                                <constraint firstItem="VFM-AK-zfq" firstAttribute="leading" secondItem="G4j-cL-BoE" secondAttribute="leadingMargin" constant="81" id="fhm-aT-Tvp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5Dm-76-B8t" secondAttribute="bottom" constant="12" id="hNd-bs-4gh"/>
+                                                <constraint firstItem="5Dm-76-B8t" firstAttribute="leading" secondItem="G4j-cL-BoE" secondAttribute="leadingMargin" constant="22" id="hiF-CQ-BKB"/>
+                                                <constraint firstItem="5Dm-76-B8t" firstAttribute="centerX" secondItem="G4j-cL-BoE" secondAttribute="centerX" id="l3z-xm-HXv"/>
+                                                <constraint firstItem="5Dm-76-B8t" firstAttribute="top" secondItem="VFM-AK-zfq" secondAttribute="bottom" constant="35" id="urb-IH-j5X"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="vxL-5I-8iO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lMe-Q5-Lse" style="IBUITableViewCellStyleDefault" id="7PN-M4-dp5">
+                                        <rect key="frame" x="0.0" y="427" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7PN-M4-dp5" id="F2I-dI-sgO">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Resident Alim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lMe-Q5-Lse">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="UGt-X9-13L" kind="show" id="xOP-ud-Epd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="rvd-OP-zye">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="JCC-cv-jQt" imageView="PJr-NN-vqT" style="IBUITableViewCellStyleDefault" id="UWb-yK-snm">
+                                        <rect key="frame" x="0.0" y="507" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UWb-yK-snm" id="ad9-xu-uts">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JCC-cv-jQt">
+                                                    <frame key="frameInset" minX="55" width="305" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Facebook" id="PJr-NN-vqT">
+                                                    <frame key="frameInset" minX="15" minY="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lpR-lz-hap" imageView="LKf-9p-agh" style="IBUITableViewCellStyleDefault" id="C09-cu-WG5">
+                                        <rect key="frame" x="0.0" y="551" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C09-cu-WG5" id="xGO-gA-wKm">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lpR-lz-hap">
+                                                    <frame key="frameInset" minX="55" width="305" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Instagram" id="LKf-9p-agh">
+                                                    <frame key="frameInset" minX="15" minY="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection footerTitle="Version 1.0" id="TG4-uA-75V">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="B9T-hH-qdf" style="IBUITableViewCellStyleDefault" id="duG-eT-e4A">
+                                        <rect key="frame" x="0.0" y="631" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="duG-eT-e4A" id="Xca-75-blg">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Rate This App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B9T-hH-qdf">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Mo0-nz-lqp" style="IBUITableViewCellStyleDefault" id="Q6X-Ml-WdF">
+                                        <rect key="frame" x="0.0" y="675" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q6X-Ml-WdF" id="XCM-N5-NGa">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Donate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mo0-nz-lqp">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Qmj-mJ-Rca" style="IBUITableViewCellStyleDefault" id="mNl-pA-Yw1">
+                                        <rect key="frame" x="0.0" y="719" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mNl-pA-Yw1" id="Ngt-Fw-rzI">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contribute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qmj-mJ-Rca">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="AJX-Mv-dTY" id="vcL-M2-wW8"/>
+                            <outlet property="delegate" destination="AJX-Mv-dTY" id="4IT-Br-6PF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjS-PR-LYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1420" y="2481.4092953523241"/>
+        </scene>
+        <!--Moulana Nabi Raza Abidi-->
+        <scene sceneID="X1w-kL-hBU">
+            <objects>
+                <viewController title="Moulana Nabi Raza Abidi" id="UGt-X9-13L" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="noB-AP-OQ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="4o9-Nh-PFj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o5c-hf-SOV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoulanaAbidi" translatesAutoresizingMaskIntoConstraints="NO" id="mTV-HP-eyU">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mTV-HP-eyU" secondAttribute="height" multiplier="375:256" id="Pgc-Bo-J5S"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-MN-6iO">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Syed Nabi Raza Abidi was born and raised in Alipour, India into a religious, Syed family from both parents. After completing his early education at the age of 14, he moved to Iran to pursue further Islamic studies. He spent the first 2 years learning Farsi, basic Arabic grammar, and Ahkam in Najafabad, Isfahan, and then relocated to Qom for approximately 13 years. In Qom, he studied at renowned Islamic seminaries and institutes such as the Institute of Imam Jafar as-Sadiq under the guidance of Ayatollah Jafar Subhani while concurrently earning his PhD in Theology and Philosophy from a sister school at the University of Tehran. Upon completing his lower level studies, he began his higher hawzah education, Dars al-Kharij, under many reputable scholars, such as Ayatollah Fadhel Lankarani, Ayatullah Bahjat, and Ayatollah Jafer Subhani. 
+Parallel to his studies, he spent several years answering questions in the office of Grand Ayatollah Fadhel Lankarani, conducting research in theology and philosophy under the guidance of Ayatollah Jafar Subhani, and teaching subjects such as Usool, Fiqh, Philosophy, and Tafseer in different schools. 
+After completing his studies in 1999, he returned to India and taught at the University of Alighar while simultaneously serving and helping different communities. He also conducted business in Dubai, and then moved to Japan in 2000, where he established a business and helped develop a community and Islamic center. 
+In 2002, Syed Abidi moved to San Jose, CA to serve as the Resident Aalim of SABA Islamic Center, and has done so for the past 13+ years. Under his guidance and the dedicated help of the community, SABA has progressed significantly in these years, including the opening of a full-time school and the development of educational curricula. 
+During his time in the Bay Area, he has participated in many interfaith and intrafaith events, spearheaded projects for the underprivileged, and played an integral role in the education realm. He also delivers lectures at churches and mosques throughout the country and advises several local and out of state mosques and Islamic community centers. 
+He continues to further his studies through research and occasional classes.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mTV-HP-eyU" firstAttribute="top" secondItem="noB-AP-OQ5" secondAttribute="bottom" id="0Yn-lx-L79"/>
+                            <constraint firstItem="c3o-MN-6iO" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" id="14e-F5-gKa"/>
+                            <constraint firstItem="mTV-HP-eyU" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" id="25X-Qc-tam"/>
+                            <constraint firstAttribute="trailing" secondItem="mTV-HP-eyU" secondAttribute="trailing" id="MvJ-9j-A9i"/>
+                            <constraint firstAttribute="trailing" secondItem="c3o-MN-6iO" secondAttribute="trailing" id="UvV-4O-Dgc"/>
+                            <constraint firstItem="4o9-Nh-PFj" firstAttribute="top" secondItem="c3o-MN-6iO" secondAttribute="bottom" id="cw2-pT-5RY"/>
+                            <constraint firstItem="c3o-MN-6iO" firstAttribute="top" secondItem="mTV-HP-eyU" secondAttribute="bottom" id="mgM-Cc-ItM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cjt-aR-t8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594" y="2481"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bny-jA-jAD">
+            <objects>
+                <viewController id="5g7-Gt-RzU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dR9-pY-D0J"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rku-ml-uPc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="25T-ZX-eWj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xQ-sj-yv2">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rku-ml-uPc" firstAttribute="top" secondItem="0xQ-sj-yv2" secondAttribute="bottom" id="5l6-WW-x1z"/>
+                            <constraint firstItem="0xQ-sj-yv2" firstAttribute="leading" secondItem="25T-ZX-eWj" secondAttribute="leading" id="CwB-Z2-BCF"/>
+                            <constraint firstAttribute="trailing" secondItem="0xQ-sj-yv2" secondAttribute="trailing" id="w5g-YF-03C"/>
+                            <constraint firstItem="0xQ-sj-yv2" firstAttribute="top" secondItem="25T-ZX-eWj" secondAttribute="top" id="y4H-Dp-v3B"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUi-aO-U4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4697" y="2131"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="8G3-Vv-J7C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ib8-eB-XE4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="More" id="Wdb-5T-nxh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OQr-9t-do1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OEm-38-2Un">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aWe-Di-ynS" kind="relationship" relationship="rootViewController" id="SLy-Jf-RSw"/>
+                        <segue destination="isR-gN-DPs" kind="relationship" relationship="rootViewController" id="bjB-1t-Ia7"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tdS-x3-Tsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7WI-ZR-mJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="1703"/>
+            <point key="canvasLocation" x="-3148" y="2475"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Contribute" width="25" height="25"/>
+        <image name="Facebook" width="25" height="25"/>
+        <image name="Home" width="25" height="25"/>
+        <image name="Info" width="25" height="25"/>
+        <image name="Instagram" width="25" height="25"/>
+        <image name="Map" width="25" height="25"/>
+        <image name="More" width="25" height="25"/>
+        <image name="MoulanaAbidi" width="480" height="320"/>
+        <image name="PrayerTime" width="25" height="25"/>
+        <image name="Schedule" width="25" height="25"/>
+        <image name="Share" width="25" height="25"/>
+        <image name="sabaLogo" width="480" height="377"/>
+    </resources>
+    <color key="tintColor" red="0.165875881" green="0.703125" blue="0.40185792930000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>

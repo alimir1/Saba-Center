@@ -11,7 +11,8 @@ import UIKit
 class UpcomingProgramsCell: UITableViewCell {
     
     @IBOutlet weak var upcomingProgramText: UITextView!
-
+    @IBOutlet weak var programImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

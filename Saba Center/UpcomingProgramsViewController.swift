@@ -31,13 +31,13 @@ class UpcomingProgramsViewController: UITableViewController {
         return upcomingPrograms.count
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingProgramCell", for: indexPath) as! UpcomingProgramsCell
@@ -45,6 +45,47 @@ class UpcomingProgramsViewController: UITableViewController {
         let upcomingProgram = upcomingPrograms[indexPath.row]
         
         cell.upcomingProgramText.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
+        
+        
+        
+        cell.programImage.image = #imageLiteral(resourceName: "PlaceHolder")
+        let url = URL(string: upcomingProgram.imageURL!)!
+        let task = URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            if let imageData = data {
+                let image = UIImage(data: imageData)
+                if let image = image {
+                    performUIUpdatesOnMain {
+                        let updateCell = self.tableView.cellForRow(at: indexPath)
+                        if let updatedCell = updateCell as? UpcomingProgramsCell {
+                            updatedCell.programImage.image = image
+                            self.tableView.reloadRows(at: [indexPath], with: .none)
+                        }
+                    }
+                }
+            }
+            
+        }
+        task.resume()
+        
+//        cell.programImage.image = #imageLiteral(resourceName: "PlaceHolder")
+//        
+//        DispatchQueue.global(qos: DispatchQoS.background.qosClass).async {
+//            do {
+//                let data = try Data(contentsOf: URL(string: upcomingProgram.imageURL!)!)
+//                let getImage = UIImage(data: data)
+//                DispatchQueue.main.async {
+//                    let updateCell = self.tableView.cellForRow(at: indexPath) as? UpcomingProgramsCell
+//                    if let updatedCell = updateCell {
+//                        updatedCell.programImage.image = getImage
+//                    }
+//                    return
+//                }
+//            }
+//            catch {
+//                return
+//            }
+//        }
         
         return cell
     }
