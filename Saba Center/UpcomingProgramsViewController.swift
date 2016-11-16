@@ -19,15 +19,11 @@ class UpcomingProgramsViewController: UITableViewController {
         }
     }
     
-    var imageCache = [URL : UIImageView]()
+    var imageCache = [URL : UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchUpcomingPrograms()
-        
-        self.tableView.estimatedRowHeight = 80;
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
-
     }
     
     // MARK: - Table view
@@ -36,38 +32,40 @@ class UpcomingProgramsViewController: UITableViewController {
         return upcomingPrograms.count
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
-//    
-//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingProgramCell", for: indexPath) as! UpcomingProgramsCell
         let upcomingProgram = upcomingPrograms[indexPath.row]
         
         cell.upcomingProgramTextView.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
-//        cell.accessoryView = UIImageView(image: #imageLiteral(resourceName: "PlaceHolder"))
-//        if let imageurl = URL(string: upcomingProgram.imageURL!) {
-//            if let img = imageCache[imageurl] {
-//                cell.accessoryView = img
-//            } else {
-//                if let data = try? Data(contentsOf: imageurl) {
-//                    if let image = UIImage(data: data) {
-//                        let imgView = UIImageView(image: image)
-//                        imgView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
-//                        imgView.layer.cornerRadius = 8.0
-//                        imgView.contentMode = .scaleAspectFit
-//                        imageCache[imageurl] = imgView
-//                        performUIUpdatesOnMain {
-//                            cell.accessoryView = imgView
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        cell.accessoryView = UIImageView(image: #imageLiteral(resourceName: "PlaceHolder"))
+        if let imageurl = URL(string: upcomingProgram.imageURL!) {
+            if let img = imageCache[imageurl] {
+                let imgView = UIImageView(image: img)
+                imgView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
+                imgView.contentMode = .scaleAspectFit
+                cell.accessoryView = imgView
+            } else {
+                if let data = try? Data(contentsOf: imageurl) {
+                    if let image = UIImage(data: data) {
+                        imageCache[imageurl] = image
+                        performUIUpdatesOnMain {
+                            let imgView = UIImageView(image: image)
+                            imgView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
+                            imgView.contentMode = .scaleAspectFit
+                            cell.accessoryView = imgView
+                        }
+                    }
+                }
+            }
+        }
 
         return cell
     }

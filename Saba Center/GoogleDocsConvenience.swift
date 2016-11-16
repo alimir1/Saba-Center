@@ -6,7 +6,7 @@
 //  Copyright © 2016 com.AliMir. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 // MARK: - GoogleDocsClient (Convenient Resource Methods)
 

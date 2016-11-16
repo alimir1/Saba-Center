@@ -6,8 +6,6 @@
 //  Copyright © 2016 com.AliMir. All rights reserved.
 //
 
-import UIKit
-
 struct SabaCenterData {
     struct UpcomingProgram {
         let title: String
