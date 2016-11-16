@@ -10,11 +10,12 @@ import UIKit
 
 class UpcomingProgramsViewController: UITableViewController {
     
+    var activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView()
+    var viewForActivityIndicator: UIView = UIView()
+    
     var upcomingPrograms: [SabaCenterData.UpcomingProgram] = [] {
         didSet {
-            performUIUpdatesOnMain {
-                self.tableView.reloadData()
-            }
+            self.stopActivityIndicator()
         }
     }
     
@@ -22,9 +23,11 @@ class UpcomingProgramsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        performUIUpdatesOnMain() {
-            self.fetchUpcomingPrograms()
-        }
+        self.fetchUpcomingPrograms()
+        
+        self.tableView.estimatedRowHeight = 80;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+
     }
     
     // MARK: - Table view
@@ -33,72 +36,92 @@ class UpcomingProgramsViewController: UITableViewController {
         return upcomingPrograms.count
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingProgramCell", for: indexPath) as! UpcomingProgramsCell
-        
         let upcomingProgram = upcomingPrograms[indexPath.row]
-
+        
         cell.upcomingProgramTextView.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
-//        cell.detailTextLabel?.text = description
-//        let countNewLines = description.components(separatedBy: "\n").count + 1
-//        cell.detailTextLabel?.numberOfLines = countNewLines
-//        cell.detailTextLabel?.lineBreakMode = .byWordWrapping
-        
-        cell.accessoryView = UIImageView(image: #imageLiteral(resourceName: "PlaceHolder"))
-        
-        if let imageurl = URL(string: upcomingProgram.imageURL!) {
-            if let img = imageCache[imageurl] {
-                cell.accessoryView = img
-            } else {
-                if let data = try? Data(contentsOf: imageurl) {
-                    if let image = UIImage(data: data) {
-                        let imgView = UIImageView(image: image)
-                        imgView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
-                        imgView.layer.cornerRadius = 8.0
-                        imgView.contentMode = .scaleAspectFit
-                        imageCache[imageurl] = imgView
-                        performUIUpdatesOnMain {
-                            cell.accessoryView = imgView
-                        }
-                    }
-                }
-            }
-        }
+//        cell.accessoryView = UIImageView(image: #imageLiteral(resourceName: "PlaceHolder"))
+//        if let imageurl = URL(string: upcomingProgram.imageURL!) {
+//            if let img = imageCache[imageurl] {
+//                cell.accessoryView = img
+//            } else {
+//                if let data = try? Data(contentsOf: imageurl) {
+//                    if let image = UIImage(data: data) {
+//                        let imgView = UIImageView(image: image)
+//                        imgView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
+//                        imgView.layer.cornerRadius = 8.0
+//                        imgView.contentMode = .scaleAspectFit
+//                        imageCache[imageurl] = imgView
+//                        performUIUpdatesOnMain {
+//                            cell.accessoryView = imgView
+//                        }
+//                    }
+//                }
+//            }
+//        }
 
         return cell
     }
+}
+
+// MARK: - Helpers
+
+extension UpcomingProgramsViewController {
+    func fetchUpcomingPrograms() {
+        showActivityIndicator()
+        GoogleDocsClient.shared().getUpcomingPrograms {
+            (data, error) in
+            if let data = data {
+                self.upcomingPrograms = data
+                self.tableView.reloadData()
+            } else {
+                // FIXME: ERROR HANDLING!
+            }
+        }
+    }
     
     func makeAttributedString(title: String, subtitle: String) -> NSAttributedString {
-        
         let titlePlain = try! NSAttributedString(
             data: title.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
             options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
             documentAttributes: nil).string
-        
         let description = try! NSAttributedString(
             data: subtitle.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
             options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
             documentAttributes: nil)
-        
         let titleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .headline), NSForegroundColorAttributeName: UIColor.darkGray]
-//        let subtitleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .subheadline)]
-        
         let titleString = NSMutableAttributedString(string: "\(titlePlain)\n", attributes: titleAttributes)
-//        let subtitleString = NSAttributedString(string: subtitle, attributes: subtitleAttributes)
-        
-        
         
         titleString.append(description)
         
         return titleString
+    }
+    
+    func showActivityIndicator() {
+        viewForActivityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        viewForActivityIndicator.backgroundColor = UIColor.white
+        self.view.addSubview(viewForActivityIndicator)
+
+        activityIndicatorView.center = viewForActivityIndicator.center
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.activityIndicatorViewStyle = .gray
+        viewForActivityIndicator.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        viewForActivityIndicator.removeFromSuperview()
+        activityIndicatorView.stopAnimating()
+        activityIndicatorView.removeFromSuperview()
     }
 }
 
@@ -118,20 +141,4 @@ extension String {
         return data(using: .utf8)
     }
 }
-
-// MARK: - Helpers
-
-extension UpcomingProgramsViewController {
-    func fetchUpcomingPrograms() {
-        GoogleDocsClient.shared().getUpcomingPrograms {
-            (data, error) in
-            if let data = data {
-                self.upcomingPrograms = data
-            } else {
-                // FIXME: ERROR HANDLING!
-            }
-        }
-    }
-}
-
 
