@@ -18,7 +18,7 @@ class UpcomingProgramsViewController: UITableViewController {
         }
     }
     
-    var imageCache = [URL : UIImage]()
+    var imageCache = [URL : UIImageView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,38 +26,47 @@ class UpcomingProgramsViewController: UITableViewController {
             self.fetchUpcomingPrograms()
         }
     }
-
+    
     // MARK: - Table view
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return upcomingPrograms.count
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
-//    
-//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingProgramCell", for: indexPath) as! UpcomingProgramsCell
         
         let upcomingProgram = upcomingPrograms[indexPath.row]
+
+        cell.upcomingProgramTextView.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
+//        cell.detailTextLabel?.text = description
+//        let countNewLines = description.components(separatedBy: "\n").count + 1
+//        cell.detailTextLabel?.numberOfLines = countNewLines
+//        cell.detailTextLabel?.lineBreakMode = .byWordWrapping
         
-        cell.upcomingProgramText.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
+        cell.accessoryView = UIImageView(image: #imageLiteral(resourceName: "PlaceHolder"))
         
-        cell.programImage.image = #imageLiteral(resourceName: "PlaceHolder")
         if let imageurl = URL(string: upcomingProgram.imageURL!) {
             if let img = imageCache[imageurl] {
-                cell.programImage.image = img
+                cell.accessoryView = img
             } else {
                 if let data = try? Data(contentsOf: imageurl) {
                     if let image = UIImage(data: data) {
-                        imageCache[imageurl] = image
+                        let imgView = UIImageView(image: image)
+                        imgView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
+                        imgView.layer.cornerRadius = 8.0
+                        imgView.contentMode = .scaleAspectFit
+                        imageCache[imageurl] = imgView
                         performUIUpdatesOnMain {
-                            cell.programImage.image = image
+                            cell.accessoryView = imgView
                         }
                     }
                 }
@@ -68,25 +77,29 @@ class UpcomingProgramsViewController: UITableViewController {
     }
     
     func makeAttributedString(title: String, subtitle: String) -> NSAttributedString {
-//        let titleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .headline)]
-//        let subtitleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .subheadline)]
         
-        let title = try! NSMutableAttributedString(
+        let titlePlain = try! NSAttributedString(
             data: title.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
             options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
-            documentAttributes: nil)
+            documentAttributes: nil).string
         
         let description = try! NSAttributedString(
             data: subtitle.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
             options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
             documentAttributes: nil)
         
-        title.append(NSAttributedString(string: "\n"))
-        title.append(description)
+        let titleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .headline), NSForegroundColorAttributeName: UIColor.darkGray]
+//        let subtitleAttributes = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: .subheadline)]
         
-        return title
+        let titleString = NSMutableAttributedString(string: "\(titlePlain)\n", attributes: titleAttributes)
+//        let subtitleString = NSAttributedString(string: subtitle, attributes: subtitleAttributes)
+        
+        
+        
+        titleString.append(description)
+        
+        return titleString
     }
-    
 }
 
 extension Data {

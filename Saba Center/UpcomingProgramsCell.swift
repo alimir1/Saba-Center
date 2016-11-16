@@ -10,8 +10,8 @@ import UIKit
 
 class UpcomingProgramsCell: UITableViewCell {
     
-    @IBOutlet weak var upcomingProgramText: UITextView!
-    @IBOutlet weak var programImage: UIImageView!
+//    @IBOutlet weak var upcomingProgramText: UITextView!
+    @IBOutlet weak var upcomingProgramTextView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

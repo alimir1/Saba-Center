@@ -12,36 +12,35 @@
         <scene sceneID="FIA-Dn-2fQ">
             <objects>
                 <tableViewController id="dOL-im-L4b" customClass="UpcomingProgramsViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="oMI-L1-n9v">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oMI-L1-n9v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="upcomingProgramCell" id="bzs-XN-3c6" customClass="UpcomingProgramsCell" customModule="Saba_Center" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bzs-XN-3c6" id="Zab-8g-yxJ">
-                                    <frame key="frameInset" width="375" height="80"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGJ-tN-SLe">
-                                            <frame key="frameInset" minX="8" minY="8" width="84" height="64"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FXE-c0-tdO">
-                                            <frame key="frameInset" minX="100" minY="8" width="267" height="64"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pYR-t1-E0Y">
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                         </textView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pYR-t1-E0Y" firstAttribute="trailing" secondItem="Zab-8g-yxJ" secondAttribute="trailingMargin" id="8of-vO-ayX"/>
+                                        <constraint firstItem="pYR-t1-E0Y" firstAttribute="bottom" secondItem="Zab-8g-yxJ" secondAttribute="bottomMargin" id="9zc-NG-Rko"/>
+                                        <constraint firstItem="pYR-t1-E0Y" firstAttribute="leading" secondItem="Zab-8g-yxJ" secondAttribute="leadingMargin" id="H7d-Xo-XAc"/>
+                                        <constraint firstItem="pYR-t1-E0Y" firstAttribute="top" secondItem="Zab-8g-yxJ" secondAttribute="topMargin" id="mkH-bF-ReN"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="programImage" destination="KGJ-tN-SLe" id="Lc8-6n-gY8"/>
-                                    <outlet property="upcomingProgramText" destination="FXE-c0-tdO" id="1LR-Bb-uhw"/>
+                                    <outlet property="upcomingProgramTextView" destination="pYR-t1-E0Y" id="Lz1-Ac-Kjz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -105,7 +104,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcy-AJ-Ixv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1335" y="-31"/>
+            <point key="canvasLocation" x="-1490" y="-17"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yL7-CK-4An">
@@ -115,6 +114,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.165875881" green="0.703125" blue="0.40185792930000003" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="cQW-tC-6dz" kind="relationship" relationship="viewControllers" id="6oJ-nG-505"/>
@@ -243,7 +243,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGl-qx-a7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2407" y="-31"/>
+            <point key="canvasLocation" x="-2562" y="-17"/>
         </scene>
         <!--Schedules-->
         <scene sceneID="pJS-6p-TXZ">
