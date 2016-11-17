@@ -107,6 +107,12 @@ extension PrayerTimesViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.textLabel?.textAlignment = .center
+        }
+    }
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return locationToDisplay ?? ""
     }
@@ -182,16 +188,37 @@ extension PrayerTimesViewController {
         let pm = placemarks[0]
         var saveAddress = ""
         if let address = pm.addressDictionary as? [String: AnyObject] {
-            if let city = address["City"], let state = address["State"], let country = address["Country"] {
-                saveAddress = "\(String(describing: city)), \(String(describing: state)), \(String(describing: country))"
-            } else if let state = address["State"], let country = address["Country"] {
-                saveAddress = "\(String(describing: state)), \(String(describing: country))"
-            } else {
-                if let country = address["Country"] {
-                    saveAddress = "\(String(describing: country))"
+            let city = (address["City"] as? String) ?? ""
+            let state = (address["State"] as? String) ?? ""
+            let country = (address["Country"] as? String) ?? ""
+            
+            if city != "" && state != "" {
+                saveAddress = "\(city), \(state)"
+            }
+            
+            if city != "" && state == "" {
+                if country != "" {
+                    saveAddress = "\(city), \(country)"
+                } else {
+                    saveAddress = city
+                }
+            }
+            
+            if city == "" && state != "" {
+                if country != "" {
+                    saveAddress = "\(state), \(country)"
+                } else {
+                    saveAddress = state
+                }
+            }
+            
+            if city == "" && state == "" {
+                if country != "" {
+                    saveAddress = country
                 }
             }
         }
+        
         performUIUpdatesOnMain {
             self.locationToDisplay = saveAddress
             self.tableView.reloadData()

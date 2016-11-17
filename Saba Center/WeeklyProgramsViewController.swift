@@ -10,7 +10,11 @@ import UIKit
 
 class WeeklyProgramsViewController: UITableViewController {
 
+    // MARK: - Properties
+    
     var timeTable: [SabaCenterData.Schedule] = []
+    
+    // MARK: - Life View Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()

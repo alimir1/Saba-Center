@@ -19,8 +19,5 @@ class UpcomingProgramsCell: UITableViewCell {
         sabaProgramsImageView.frame = CGRect(x: 0.0, y: 0.0, width: 80.0, height: 110.0)
         sabaProgramsImageView.contentMode = .scaleAspectFit
         accessoryView = sabaProgramsImageView
-        
-        self.layoutMargins = UIEdgeInsets.zero
-        self.preservesSuperviewLayoutMargins = false
     }
 }

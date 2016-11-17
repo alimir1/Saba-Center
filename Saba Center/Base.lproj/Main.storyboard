@@ -54,7 +54,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdi-5V-oUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2447" y="837"/>
+            <point key="canvasLocation" x="-1998" y="836"/>
         </scene>
         <!--Prayer Times-->
         <scene sceneID="621-K0-5Xs">
@@ -64,6 +64,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="prayTimeCell" textLabel="E9t-0U-rm2" detailTextLabel="97x-lp-FsZ" style="IBUITableViewCellStyleValue1" id="M43-wZ-IXo">
                                 <rect key="frame" x="0.0" y="120" width="375" height="44"/>
@@ -105,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcy-AJ-Ixv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2447" y="86"/>
+            <point key="canvasLocation" x="-1999" y="86"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yL7-CK-4An">
@@ -173,14 +174,21 @@
                             <constraint firstItem="WfN-04-axV" firstAttribute="top" secondItem="RD2-c6-Tz1" secondAttribute="bottom" id="qHd-gl-XgI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Schedules" id="1wq-yA-xyW"/>
+                    <navigationItem key="navigationItem" title="Schedules" id="1wq-yA-xyW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="JPI-jd-6Uf">
+                            <connections>
+                                <action selector="refreshPageWithSender:" destination="RVK-ez-ZFk" id="wnn-Nb-M3T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="WfN-04-axV" id="A0j-fU-Zjm"/>
+                        <outlet property="refreshButton" destination="JPI-jd-6Uf" id="AEO-d3-usA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUf-gY-R4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2446" y="1596"/>
+            <point key="canvasLocation" x="-2164" y="1595"/>
         </scene>
         <!--Weekly Programs View Controller-->
         <scene sceneID="xns-T1-qhC">
@@ -199,7 +207,7 @@
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3wE-BV-ACd">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3wE-BV-ACd">
                                             <frame key="frameInset" minX="15" minY="14" width="91" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -226,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdz-iU-9ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1996" y="1595"/>
+            <point key="canvasLocation" x="-1314" y="1594"/>
         </scene>
         <!--Pray Times-->
         <scene sceneID="wjI-mN-Y1H">
@@ -381,7 +389,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUO-Ym-Jpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2447" y="2481"/>
+            <point key="canvasLocation" x="-2121" y="2481"/>
         </scene>
         <!--About-->
         <scene sceneID="5Zt-Xo-gtc">
@@ -559,7 +567,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjS-PR-LYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1997" y="2481"/>
+            <point key="canvasLocation" x="-1455" y="2481"/>
         </scene>
         <!--Moulana Nabi Raza Abidi-->
         <scene sceneID="X1w-kL-hBU">

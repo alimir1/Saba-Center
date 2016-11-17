@@ -11,6 +11,9 @@ import PageMenu
 
 class PageMenuViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
     @IBOutlet weak var containerView: UIView!
     
     var activityIndicator: ActivityIndicator!
@@ -30,6 +33,8 @@ class PageMenuViewController: UIViewController {
         }
     }
     
+    // MARK: - Life View Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +45,16 @@ class PageMenuViewController: UIViewController {
         // Fetch weekly programs from the APi
         self.fetchWeeklyPrograms()
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func refreshPage(sender: AnyObject?) {
+        refreshButton.isEnabled = false
+        activityIndicator.showActivityIndicator()
+        controllerArray.removeAll()
+        self.fetchWeeklyPrograms()
+    }
+    
 }
 
 // MARK: - Helpers
@@ -49,7 +64,8 @@ extension PageMenuViewController {
         GoogleDocsClient.shared().getWeeklyPrograms() {
             (data, error) in
             
-            // Stop activity indicator
+            // Stop activity indicator and enable refresh button
+            self.refreshButton.isEnabled = true
             self.activityIndicator.stopActivityIndicator()
             
             guard (error == nil) else {
