@@ -26,9 +26,11 @@ class UpcomingProgramsViewController: UITableViewController {
         }
     }
     
+    // MARK: - View Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Setup activity indicator view
         activityIndicator = ActivityIndicator(view: self.view, navigationController: self.navigationController, tabBarController: self.tabBarController)
         

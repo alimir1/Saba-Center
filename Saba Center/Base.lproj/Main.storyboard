@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Saba Center-->
+        <!--Home-->
         <scene sceneID="FIA-Dn-2fQ">
             <objects>
                 <tableViewController id="dOL-im-L4b" customClass="UpcomingProgramsViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <outlet property="delegate" destination="dOL-im-L4b" id="2tf-gp-ni6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Saba Center" id="uRu-vZ-huY"/>
+                    <navigationItem key="navigationItem" title="Home" id="uRu-vZ-huY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdi-5V-oUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

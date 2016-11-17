@@ -23,6 +23,7 @@
 		49368D9A1DD51D5400D3257D /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D991DD51D5400D3257D /* GCD.swift */; };
 		49392FF21DDB9F3200BEA705 /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49392FF11DDB9F3100BEA705 /* PageMenuViewController.swift */; };
 		49392FF41DDBCA1500BEA705 /* ResidentAlimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49392FF31DDBCA1500BEA705 /* ResidentAlimViewController.swift */; };
+		4950E8071DDE611D00765FD2 /* IslamicMonths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950E8061DDE611D00765FD2 /* IslamicMonths.swift */; };
 		49A212F21DDBFF3300514A66 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */; };
 		49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */; };
 		49C571B61DDAA484008C9558 /* WeeklyProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */; };
@@ -51,6 +52,7 @@
 		49368D991DD51D5400D3257D /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		49392FF11DDB9F3100BEA705 /* PageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
 		49392FF31DDBCA1500BEA705 /* ResidentAlimViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidentAlimViewController.swift; sourceTree = "<group>"; };
+		4950E8061DDE611D00765FD2 /* IslamicMonths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IslamicMonths.swift; sourceTree = "<group>"; };
 		49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingProgramsCell.swift; sourceTree = "<group>"; };
 		49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				492836321DD7A17C00909041 /* PrayerTimeModel.swift */,
+				4950E8061DDE611D00765FD2 /* IslamicMonths.swift */,
 				4902FFD41DD629C400E54871 /* PrayTime.h */,
 				4902FFD61DD629F500E54871 /* PrayTime.m */,
 				4902FFD51DD629F400E54871 /* Saba Center-Bridging-Header.h */,
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49368D9A1DD51D5400D3257D /* GCD.swift in Sources */,
+				4950E8071DDE611D00765FD2 /* IslamicMonths.swift in Sources */,
 				492836311DD6431100909041 /* PrayerTimesViewController.swift in Sources */,
 				492836391DDA2A7100909041 /* UpcomingProgramsViewController.swift in Sources */,
 				49392FF41DDBCA1500BEA705 /* ResidentAlimViewController.swift in Sources */,

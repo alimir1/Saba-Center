@@ -32,6 +32,17 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dateComponents = Calendar(identifier: .islamicTabular).dateComponents(in: TimeZone.current, from: Date())
+        
+        // Set Islamic calendar in navigationItem
+        if let day = dateComponents.day, let month = dateComponents.month, let year = dateComponents.year, let islamicMonth = IslamicMonths(rawValue: month)?.string {
+            self.navigationItem.title = "\(islamicMonth) \(day), \(year)"
+        } else {
+            self.navigationItem.title = "Prayer Times"
+        }
+        
+        
+        
         startLocation()
     }
 
