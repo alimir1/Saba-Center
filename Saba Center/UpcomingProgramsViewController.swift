@@ -22,6 +22,7 @@ class UpcomingProgramsViewController: UITableViewController {
     var upcomingPrograms: [SabaCenterData.UpcomingProgram] = [] {
         didSet {
             self.tableView.isScrollEnabled = true
+            self.tableView.separatorStyle = .singleLine
         }
     }
     
@@ -37,6 +38,7 @@ class UpcomingProgramsViewController: UITableViewController {
         
         // Fetch upcoming programs from the API.
         activityIndicator.showActivityIndicator(adjustHeightForBars: true)
+        self.tableView.separatorStyle = .none
         self.tableView.isScrollEnabled = false
         self.fetchUpcomingPrograms()
     }
