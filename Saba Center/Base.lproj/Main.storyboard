@@ -54,36 +54,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdi-5V-oUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1535.2" y="739.88005997001505"/>
+            <point key="canvasLocation" x="-2447" y="837"/>
         </scene>
         <!--Prayer Times-->
         <scene sceneID="621-K0-5Xs">
             <objects>
                 <tableViewController storyboardIdentifier="prayerTimesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T53-WA-JrN" customClass="PrayerTimesViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IuO-AS-NS1">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="IuO-AS-NS1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="prayTimeCell" textLabel="E9t-0U-rm2" detailTextLabel="97x-lp-FsZ" style="IBUITableViewCellStyleValue1" id="M43-wZ-IXo">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M43-wZ-IXo" id="Zfw-2c-wHD">
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E9t-0U-rm2">
-                                            <frame key="frameInset" minX="15" minY="11" width="34" height="21"/>
+                                            <frame key="frameInset" minX="15" minY="11" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="97x-lp-FsZ">
-                                            <frame key="frameInset" minX="316" minY="11" width="44" height="21"/>
+                                            <frame key="frameInset" minX="313" minY="11" width="47" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.39855934269999999" green="0.44588921479999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -105,7 +105,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcy-AJ-Ixv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1490" y="-17"/>
+            <point key="canvasLocation" x="-2447" y="86"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yL7-CK-4An">
@@ -145,7 +145,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHU-kj-hw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2473" y="739"/>
+            <point key="canvasLocation" x="-2888" y="837"/>
         </scene>
         <!--Schedules-->
         <scene sceneID="Zn9-i1-4l3">
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUf-gY-R4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1948" y="1595.352323838081"/>
+            <point key="canvasLocation" x="-2446" y="1596"/>
         </scene>
         <!--Weekly Programs View Controller-->
         <scene sceneID="xns-T1-qhC">
@@ -226,7 +226,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdz-iU-9ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1119" y="1595"/>
+            <point key="canvasLocation" x="-1996" y="1595"/>
         </scene>
         <!--Pray Times-->
         <scene sceneID="wjI-mN-Y1H">
@@ -245,7 +245,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGl-qx-a7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2562" y="-17"/>
+            <point key="canvasLocation" x="-2888" y="86"/>
         </scene>
         <!--Schedules-->
         <scene sceneID="pJS-6p-TXZ">
@@ -381,7 +381,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUO-Ym-Jpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2295.1999999999998" y="2473.313343328336"/>
+            <point key="canvasLocation" x="-2447" y="2481"/>
         </scene>
         <!--About-->
         <scene sceneID="5Zt-Xo-gtc">
@@ -559,7 +559,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjS-PR-LYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1420" y="2481.4092953523241"/>
+            <point key="canvasLocation" x="-1997" y="2481"/>
         </scene>
         <!--Moulana Nabi Raza Abidi-->
         <scene sceneID="X1w-kL-hBU">
@@ -634,7 +634,7 @@ He continues to further his studies through research and occasional classes.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUi-aO-U4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4697" y="2131"/>
+            <point key="canvasLocation" x="-3889" y="2334"/>
         </scene>
         <!--More-->
         <scene sceneID="8G3-Vv-J7C">
@@ -653,7 +653,7 @@ He continues to further his studies through research and occasional classes.
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7WI-ZR-mJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3148" y="2475"/>
+            <point key="canvasLocation" x="-2888" y="2481"/>
         </scene>
     </scenes>
     <resources>

@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import Contacts
+import AddressBookUI
 
 class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegate {
     
@@ -24,9 +26,11 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
     var userLocation: CLLocationCoordinate2D! {
         didSet {
             getPrayerTimes(coordinates: userLocation)
-            self.tableView.reloadData()
+            reverseGeocoding(latitude: userLocation.latitude, longitude: userLocation.longitude)
         }
     }
+    
+    var locationToDisplay: String?
     
     // MARK: - View Life Cycles
     
@@ -40,9 +44,7 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
         } else {
             self.navigationItem.title = "Prayer Times"
         }
-        
-        
-        
+
         startLocation()
     }
 
@@ -104,6 +106,10 @@ extension PrayerTimesViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return locationToDisplay ?? ""
+    }
 }
 
 // MARK: - CLLocationManager Delegates
@@ -139,6 +145,7 @@ extension PrayerTimesViewController {
         
         if let userCoordinates = manager.location?.coordinate {
             self.userLocation = userCoordinates
+            self.tableView.reloadData()
             print("user location: \(userCoordinates)")
         } else {
             let alertCtrl = UIAlertController(
@@ -155,4 +162,40 @@ extension PrayerTimesViewController {
     }
 }
 
+// MARK: - Geocoding
+
+extension PrayerTimesViewController {
+    func reverseGeocoding(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
+            if error != nil {
+                print(error)
+                return
+            }
+            else if let placemarks = placemarks, placemarks.count > 0 {
+                self.setLocationAddress(placemarks)
+            }
+        })
+    }
+    
+    func setLocationAddress(_ placemarks: [CLPlacemark]) {
+        let pm = placemarks[0]
+        var saveAddress = ""
+        if let address = pm.addressDictionary as? [String: AnyObject] {
+            if let city = address["City"], let state = address["State"], let country = address["Country"] {
+                saveAddress = "\(String(describing: city)), \(String(describing: state)), \(String(describing: country))"
+            } else if let state = address["State"], let country = address["Country"] {
+                saveAddress = "\(String(describing: state)), \(String(describing: country))"
+            } else {
+                if let country = address["Country"] {
+                    saveAddress = "\(String(describing: country))"
+                }
+            }
+        }
+        performUIUpdatesOnMain {
+            self.locationToDisplay = saveAddress
+            self.tableView.reloadData()
+        }
+    }
+}
 
