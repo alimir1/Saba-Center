@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class UpcomingProgramsViewController: UITableViewController {
     
@@ -19,7 +20,7 @@ class UpcomingProgramsViewController: UITableViewController {
         }
     }
     
-    var imageCache = [URL : UIImage]()
+    var imageCache = [URL : UIImageView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,28 +46,10 @@ class UpcomingProgramsViewController: UITableViewController {
         let upcomingProgram = upcomingPrograms[indexPath.row]
         
         cell.upcomingProgramTextView.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
-        cell.accessoryView = UIImageView(image: #imageLiteral(resourceName: "PlaceHolder"))
+            
         if let imageurl = URL(string: upcomingProgram.imageURL!) {
-            if let img = imageCache[imageurl] {
-                let imgView = UIImageView(image: img)
-                imgView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
-                imgView.contentMode = .scaleAspectFit
-                cell.accessoryView = imgView
-            } else {
-                if let data = try? Data(contentsOf: imageurl) {
-                    if let image = UIImage(data: data) {
-                        imageCache[imageurl] = image
-                        performUIUpdatesOnMain {
-                            let imgView = UIImageView(image: image)
-                            imgView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
-                            imgView.contentMode = .scaleAspectFit
-                            cell.accessoryView = imgView
-                        }
-                    }
-                }
-            }
+            Nuke.loadImage(with: imageurl, into: cell.sabaProgramsImageView)
         }
-
         return cell
     }
 }

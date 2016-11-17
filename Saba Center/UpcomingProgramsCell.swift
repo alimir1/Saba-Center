@@ -10,10 +10,14 @@ import UIKit
 
 class UpcomingProgramsCell: UITableViewCell {
     
-//    @IBOutlet weak var upcomingProgramText: UITextView!
     @IBOutlet weak var upcomingProgramTextView: UITextView!
+    
+    var sabaProgramsImageView: UIImageView = UIImageView()
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        sabaProgramsImageView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 110.0)
+        sabaProgramsImageView.contentMode = .scaleAspectFit
+        accessoryView = sabaProgramsImageView
     }
 }
