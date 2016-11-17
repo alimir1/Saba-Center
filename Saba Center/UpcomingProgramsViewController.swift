@@ -11,46 +11,34 @@ import Nuke
 
 class UpcomingProgramsViewController: UITableViewController {
     
+    // MARK: - Properties
+    
+    internal lazy var refreshCTRL = UIRefreshControl()
+    internal var activityIndicator: ActivityIndicator!
+    
     var activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView()
     var viewForActivityIndicator: UIView = UIView()
     
     var upcomingPrograms: [SabaCenterData.UpcomingProgram] = [] {
         didSet {
-            self.stopActivityIndicator()
+            self.tableView.isScrollEnabled = true
         }
     }
-    
-    var imageCache = [URL : UIImageView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchUpcomingPrograms()
-    }
-    
-    // MARK: - Table view
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return upcomingPrograms.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingProgramCell", for: indexPath) as! UpcomingProgramsCell
-        let upcomingProgram = upcomingPrograms[indexPath.row]
         
-        cell.upcomingProgramTextView.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
-            
-        if let imageurl = URL(string: upcomingProgram.imageURL!) {
-            Nuke.loadImage(with: imageurl, into: cell.sabaProgramsImageView)
-        }
-        return cell
+        // Setup activity indicator view
+        activityIndicator = ActivityIndicator(view: self.view, navigationController: self.navigationController, tabBarController: self.tabBarController)
+        
+        // Setup the refresh control.
+        tableView.addSubview(refreshCTRL)
+        refreshCTRL.addTarget(self, action: #selector(self.fetchUpcomingPrograms), for: .valueChanged)
+        
+        // Fetch upcoming programs from the API.
+        activityIndicator.showActivityIndicator(adjustHeightForBars: true)
+        self.tableView.isScrollEnabled = false
+        self.fetchUpcomingPrograms()
     }
 }
 
@@ -58,7 +46,6 @@ class UpcomingProgramsViewController: UITableViewController {
 
 extension UpcomingProgramsViewController {
     func fetchUpcomingPrograms() {
-        showActivityIndicator()
         GoogleDocsClient.shared().getUpcomingPrograms {
             (data, error) in
             if let data = data {
@@ -67,9 +54,13 @@ extension UpcomingProgramsViewController {
             } else {
                 // FIXME: ERROR HANDLING!
             }
+            
+            // Stop animating the refresh control and stop activity indicator
+            self.refreshCTRL.endRefreshing()
+            self.activityIndicator.stopActivityIndicator()
         }
     }
-    
+
     func makeAttributedString(title: String, subtitle: String) -> NSAttributedString {
         let titlePlain = try! NSAttributedString(
             data: title.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
@@ -86,23 +77,34 @@ extension UpcomingProgramsViewController {
         
         return titleString
     }
-    
-    func showActivityIndicator() {
-        viewForActivityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        viewForActivityIndicator.backgroundColor = UIColor.white
-        self.view.addSubview(viewForActivityIndicator)
+}
 
-        activityIndicatorView.center = viewForActivityIndicator.center
-        activityIndicatorView.hidesWhenStopped = true
-        activityIndicatorView.activityIndicatorViewStyle = .gray
-        viewForActivityIndicator.addSubview(activityIndicatorView)
-        activityIndicatorView.startAnimating()
+// MARK: - Table view
+
+extension UpcomingProgramsViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return upcomingPrograms.count
     }
     
-    func stopActivityIndicator() {
-        viewForActivityIndicator.removeFromSuperview()
-        activityIndicatorView.stopAnimating()
-        activityIndicatorView.removeFromSuperview()
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingProgramCell", for: indexPath) as! UpcomingProgramsCell
+        let upcomingProgram = upcomingPrograms[indexPath.row]
+        
+        cell.upcomingProgramTextView.attributedText = makeAttributedString(title: upcomingProgram.title, subtitle: upcomingProgram.description)
+        
+        if let imageurl = URL(string: upcomingProgram.imageURL ?? "") {
+            Nuke.loadImage(with: imageurl, into: cell.sabaProgramsImageView)
+        }
+        
+        return cell
     }
 }
 

@@ -27,6 +27,7 @@
 		49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */; };
 		49C571B41DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B31DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift */; };
 		49C571B61DDAA484008C9558 /* WeeklyProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */; };
+		49D5DA751DDE38C700BF929E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D5DA741DDE38C700BF929E /* ActivityIndicator.swift */; };
 		94A9372DEF662ADC63FCD6BE /* Pods_Saba_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingProgramsCell.swift; sourceTree = "<group>"; };
 		49C571B31DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysOfWeekCollectionCellCell.swift; sourceTree = "<group>"; };
 		49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsViewController.swift; sourceTree = "<group>"; };
+		49D5DA741DDE38C700BF929E /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saba_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6AB722BB8D7EFAD34F5906 /* Pods-Saba Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2A168F188672C3C446468C /* Pods-Saba Center.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */,
 				49C571B31DDA9CDC008C9558 /* DaysOfWeekCollectionCellCell.swift */,
+				49D5DA741DDE38C700BF929E /* ActivityIndicator.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				49368D7B1DCF8ED600D3257D /* AppDelegate.swift in Sources */,
 				49368D901DCFF54100D3257D /* GoogleDocsClient.swift in Sources */,
 				49368D921DCFF59900D3257D /* GoogleDocsConstants.swift in Sources */,
+				49D5DA751DDE38C700BF929E /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

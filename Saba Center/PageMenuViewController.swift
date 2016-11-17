@@ -13,6 +13,8 @@ class PageMenuViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     
+    var activityIndicator: ActivityIndicator!
+    
     var weeklyPrograms: [SabaCenterData.WeeklyProgram] = [] {
         didSet {
             populateViewControllers()
@@ -30,6 +32,12 @@ class PageMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup activity indicator
+        activityIndicator = ActivityIndicator(view: self.view, navigationController: self.navigationController, tabBarController: self.tabBarController)
+        activityIndicator.showActivityIndicator()
+        
+        // Fetch weekly programs from the APi
         self.fetchWeeklyPrograms()
     }
 }
@@ -40,11 +48,16 @@ extension PageMenuViewController {
     func fetchWeeklyPrograms() {
         GoogleDocsClient.shared().getWeeklyPrograms() {
             (data, error) in
+            
+            // Stop activity indicator
+            self.activityIndicator.stopActivityIndicator()
+            
             guard (error == nil) else {
                 // FIXME: ERROR HANDLING
                 return
             }
             self.weeklyPrograms = data
+            
         }
     }
     
