@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o56-Iv-etk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UGt-X9-13L">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -431,7 +430,7 @@
                                         <rect key="frame" x="0.0" y="99" width="375" height="292"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7AQ-Ww-h7A" id="G4j-cL-BoE">
-                                            <frame key="frameInset" width="375" height="291"/>
+                                            <frame key="frameInset" width="375" height="292"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sabaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-AK-zfq"/>
@@ -597,7 +596,7 @@
         <!--Moulana Nabi Raza Abidi-->
         <scene sceneID="X1w-kL-hBU">
             <objects>
-                <viewController title="Moulana Nabi Raza Abidi" id="UGt-X9-13L" sceneMemberID="viewController">
+                <viewController title="Moulana Nabi Raza Abidi" id="UGt-X9-13L" customClass="ResidentAlimViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="noB-AP-OQ5"/>
                         <viewControllerLayoutGuide type="bottom" id="4o9-Nh-PFj"/>
@@ -606,35 +605,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoulanaAbidi" translatesAutoresizingMaskIntoConstraints="NO" id="6Em-bz-N8g">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc5-XS-uDV">
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8RT-xx-ZLa" userLabel="Content View">
+                                        <rect key="frame" x="8" y="-56" width="359" height="538"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vv3-bY-viw">
+                                                <frame key="frameInset" minX="8" minY="8" width="343" height="522"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="538" id="3XV-nc-erf"/>
+                                            <constraint firstAttribute="trailing" secondItem="vv3-bY-viw" secondAttribute="trailing" constant="8" id="6Am-DV-wCD"/>
+                                            <constraint firstItem="vv3-bY-viw" firstAttribute="leading" secondItem="8RT-xx-ZLa" secondAttribute="leading" constant="8" id="E1A-4X-YWe"/>
+                                            <constraint firstAttribute="width" constant="359" id="Kzk-UX-BZ5"/>
+                                            <constraint firstItem="vv3-bY-viw" firstAttribute="top" secondItem="8RT-xx-ZLa" secondAttribute="top" constant="8" id="Zoo-1r-ug1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="6Em-bz-N8g" secondAttribute="height" multiplier="375:118" id="JC0-Fh-ypT"/>
+                                    <constraint firstItem="8RT-xx-ZLa" firstAttribute="leading" secondItem="jc5-XS-uDV" secondAttribute="leading" constant="8" id="HXh-0j-WKw"/>
+                                    <constraint firstItem="8RT-xx-ZLa" firstAttribute="top" secondItem="jc5-XS-uDV" secondAttribute="top" constant="8" id="PlM-Y9-dGX"/>
+                                    <constraint firstAttribute="bottom" secondItem="8RT-xx-ZLa" secondAttribute="bottom" constant="8" id="dcc-lA-rEV"/>
+                                    <constraint firstAttribute="trailing" secondItem="8RT-xx-ZLa" secondAttribute="trailing" constant="8" id="iBF-Hr-nX0"/>
                                 </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH6-g4-w09">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Imam and Resident Aalim - Dr. Nabi Raza Abidi 
-Syed Nabi Raza Abidi was born and raised in Alipour, India into a religious, Syed family from both parents. After completing his early education at the age of 14, he moved to Iran to pursue further Islamic studies. He spent the first 2 years learning Farsi, basic Arabic grammar, and Ahkam in Najafabad, Isfahan, and then relocated to Qom for approximately 13 years. In Qom, he studied at renowned Islamic seminaries and institutes such as the Institute of Imam Jafar as-Sadiq under the guidance of Ayatollah Jafar Subhani while concurrently earning his PhD in Theology and Philosophy from a sister school at the University of Tehran. Upon completing his lower level studies, he began his higher hawzah education, Dars al-Kharij, under many reputable scholars, such as Ayatollah Fadhel Lankarani, Ayatullah Bahjat, and Ayatollah Jafer Subhani.
-Parallel to his studies, he spent several years answering questions in the office of Grand Ayatollah Fadhel Lankarani, conducting research in theology and philosophy under the guidance of Ayatollah Jafar Subhani, and teaching subjects such as Usool, Fiqh, Philosophy, and Tafseer in different schools. 
-After completing his studies in 1999, he returned to India and taught at the University of Alighar while simultaneously serving and helping different communities. He also conducted business in Dubai, and then moved to Japan in 2000, where he established a business and helped develop a community and Islamic center. 
-In 2002, Syed Abidi moved to San Jose, CA to serve as the Resident Aalim of SABA Islamic Center, and has done so for the past 13+ years. Under his guidance and the dedicated help of the community, SABA has progressed significantly in these years, including the opening of a full-time school and the development of educational curricula. 
-During his time in the Bay Area, he has participated in many interfaith and intrafaith events, spearheaded projects for the underprivileged, and played an integral role in the education realm. He also delivers lectures at churches and mosques throughout the country and advises several local and out of state mosques and Islamic community centers. 
-He continues to further his studies through research and occasional classes.
-</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FH6-g4-w09" firstAttribute="top" secondItem="6Em-bz-N8g" secondAttribute="bottom" constant="8" id="2ZA-uw-keD"/>
-                            <constraint firstAttribute="trailing" secondItem="FH6-g4-w09" secondAttribute="trailing" constant="16" id="85O-OX-Axj"/>
-                            <constraint firstItem="6Em-bz-N8g" firstAttribute="top" secondItem="noB-AP-OQ5" secondAttribute="bottom" id="8sz-bb-DLm"/>
-                            <constraint firstItem="FH6-g4-w09" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" constant="16" id="Ltw-vI-7VI"/>
-                            <constraint firstAttribute="trailing" secondItem="6Em-bz-N8g" secondAttribute="trailing" id="SDg-t0-49o"/>
-                            <constraint firstItem="6Em-bz-N8g" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" id="SLe-Nw-VRP"/>
+                            <constraint firstItem="jc5-XS-uDV" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" id="1Vx-7S-k6x"/>
+                            <constraint firstItem="8RT-xx-ZLa" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leadingMargin" constant="-8" id="23m-et-Xnt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8RT-xx-ZLa" secondAttribute="trailing" constant="-8" id="4IQ-RT-Psu"/>
+                            <constraint firstAttribute="trailing" secondItem="jc5-XS-uDV" secondAttribute="trailing" id="6kp-sP-XFS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vv3-bY-viw" secondAttribute="leading" id="EdA-Ca-q99"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vv3-bY-viw" secondAttribute="trailing" id="F8C-Bf-BT7"/>
+                            <constraint firstItem="jc5-XS-uDV" firstAttribute="top" secondItem="noB-AP-OQ5" secondAttribute="bottom" id="p2D-CB-vhT"/>
+                            <constraint firstItem="4o9-Nh-PFj" firstAttribute="top" secondItem="jc5-XS-uDV" secondAttribute="bottom" id="pEf-Gg-Gff"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="vv3-bY-viw" id="B6b-hG-zZJ"/>
+                        <outlet property="scrollView" destination="jc5-XS-uDV" id="3Zk-ht-nhX"/>
+                        <outlet property="viewHeightConstraint" destination="3XV-nc-erf" id="vTx-uG-zdt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjt-aR-t8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -697,7 +714,6 @@ He continues to further his studies through research and occasional classes.
         <image name="Instagram" width="25" height="25"/>
         <image name="Map" width="25" height="25"/>
         <image name="More" width="25" height="25"/>
-        <image name="MoulanaAbidi" width="480" height="320"/>
         <image name="PrayerTime" width="25" height="25"/>
         <image name="Schedule" width="25" height="25"/>
         <image name="Share" width="25" height="25"/>
