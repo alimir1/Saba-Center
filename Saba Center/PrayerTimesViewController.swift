@@ -14,6 +14,9 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
     
     // MARK: - Properties
     
+    @IBOutlet weak var refreshBarButton: UIBarButtonItem!
+    @IBOutlet weak var shareBarButton: UIBarButtonItem!
+    
     var locationManager = CLLocationManager()
     
     var prayerTimes: [PrayerTimeModel] = [] {
@@ -36,6 +39,7 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         startLocation()
+        shareBarButton.isEnabled = false
     }
 
 }
@@ -44,9 +48,34 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
 
 extension PrayerTimesViewController {
     @IBAction func refreshTable(sender: AnyObject?) {
+        refreshBarButton.isEnabled = false
+        shareBarButton.isEnabled = false
         prayerTimes.removeAll()
         self.tableView.reloadData()
         startLocation()
+    }
+    
+    @IBAction func sharePrayerTimes(sender: AnyObject?) {
+        shareBarButton.isEnabled = false
+        guard prayerTimes.count > 0 else {
+            shareBarButton.isEnabled = true
+            return
+        }
+        var prayerTimesToShare = "Today's Prayer Times:"
+        for prayTime in prayerTimes {
+            prayerTimesToShare += "\n\(prayTime.name): \(prayTime.time)"
+        }
+        
+        let activityController = UIActivityViewController(activityItems: [prayerTimesToShare], applicationActivities: nil)
+        
+        activityController.completionWithItemsHandler = {
+            (activity: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+            if completed {
+                self.dismiss(animated: true, completion: nil)
+            }
+            self.shareBarButton.isEnabled = true
+        }
+        present(activityController, animated: true, completion: nil)
     }
 }
 
@@ -179,6 +208,9 @@ extension PrayerTimesViewController {
             alertCtrl.addAction(tryAgainAction)
             present(alertCtrl, animated: true, completion: nil)
         }
+        
+        refreshBarButton.isEnabled = true
+        shareBarButton.isEnabled = true
     }
 }
 

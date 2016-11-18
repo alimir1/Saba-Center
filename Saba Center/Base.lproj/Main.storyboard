@@ -98,13 +98,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Prayer Times" id="P22-nr-NTj">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="NoW-aa-nwP"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="NoW-aa-nwP">
+                            <connections>
+                                <action selector="sharePrayerTimesWithSender:" destination="T53-WA-JrN" id="Oom-H3-L2f"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="i0T-cW-2nv">
                             <connections>
                                 <action selector="refreshTableWithSender:" destination="T53-WA-JrN" id="OoY-oJ-S3p"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="refreshBarButton" destination="i0T-cW-2nv" id="9mn-az-mEm"/>
+                        <outlet property="shareBarButton" destination="NoW-aa-nwP" id="ziu-ej-UVn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcy-AJ-Ixv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,11 +260,11 @@
             </objects>
             <point key="canvasLocation" x="-1314.4000000000001" y="1593.1034482758621"/>
         </scene>
-        <!--Pray Times-->
+        <!--Prayer Times-->
         <scene sceneID="wjI-mN-Y1H">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ose-Pc-cRH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pray Times" image="PrayerTime" selectedImage="PrayerTime" id="hFY-wm-4kH"/>
+                    <tabBarItem key="tabBarItem" title="Prayer Times" image="PrayerTime" selectedImage="PrayerTime" id="hFY-wm-4kH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gb4-fP-Zof">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
