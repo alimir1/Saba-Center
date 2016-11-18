@@ -683,5 +683,5 @@ He continues to further his studies through research and occasional classes.
         <image name="Share" width="25" height="25"/>
         <image name="sabaLogo" width="480" height="377"/>
     </resources>
-    <color key="tintColor" red="0.165875881" green="0.703125" blue="0.40185792930000003" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.16470588235294117" green="0.70196078431372544" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

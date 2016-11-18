@@ -92,22 +92,23 @@ extension PageMenuViewController {
     }
     
     func setupPageMenu() {
-        // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
-        // Example:
+        // Customize page menu
+        let themeColor = UIColor(red:0.16, green:0.70, blue:0.40, alpha:1.0)
         let parameters: [CAPSPageMenuOption] = [
-            .menuItemSeparatorWidth(4.3),
+            .menuItemSeparatorWidth(3.5),
             .useMenuLikeSegmentedControl(true),
-            .menuItemSeparatorPercentageHeight(0.1)
+            .menuItemSeparatorPercentageHeight(0.1),
+            .selectedMenuItemLabelColor(themeColor),
+            .unselectedMenuItemLabelColor(UIColor.black),
+            .selectionIndicatorColor(themeColor),
+            .scrollMenuBackgroundColor(UIColor.white),
         ]
         
         // Initialize page menu with controller array, frame, and optional parameters
-        
         let frame = CGRect(x: 0.0, y: 0.0, width: containerView.frame.width, height: containerView.frame.height)
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: frame, pageMenuOptions: parameters)
         
-        // Lastly add page menu as subview of base view controller view
-        // or use pageMenu controller in you view hierachy as desired
-//        self.view.addSubview(pageMenu!.view)
+        // Add page menu as subview of base view controller view
         containerView.addSubview(pageMenu!.view)
     }
 }
