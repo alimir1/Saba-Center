@@ -306,6 +306,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="3ji-Me-ZrZ">
                             <rect key="frame" x="0.0" y="240" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -413,7 +414,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUO-Ym-Jpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2121" y="2481"/>
+            <point key="canvasLocation" x="-2122" y="2955"/>
         </scene>
         <!--About-->
         <scene sceneID="5Zt-Xo-gtc">
@@ -426,11 +427,11 @@
                         <sections>
                             <tableViewSection id="gMK-fn-Ps6">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="292" id="7AQ-Ww-h7A">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="292" id="7AQ-Ww-h7A">
                                         <rect key="frame" x="0.0" y="99" width="375" height="292"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7AQ-Ww-h7A" id="G4j-cL-BoE">
-                                            <frame key="frameInset" width="375" height="292"/>
+                                            <frame key="frameInset" width="375" height="291"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sabaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-AK-zfq"/>
@@ -591,7 +592,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjS-PR-LYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1455" y="2481"/>
+            <point key="canvasLocation" x="-1375" y="2418"/>
         </scene>
         <!--Moulana Nabi Raza Abidi-->
         <scene sceneID="X1w-kL-hBU">
@@ -605,39 +606,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoulanaAbidi" translatesAutoresizingMaskIntoConstraints="NO" id="mTV-HP-eyU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoulanaAbidi" translatesAutoresizingMaskIntoConstraints="NO" id="6Em-bz-N8g">
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="mTV-HP-eyU" secondAttribute="height" multiplier="375:256" id="Pgc-Bo-J5S"/>
+                                    <constraint firstAttribute="width" secondItem="6Em-bz-N8g" secondAttribute="height" multiplier="375:118" id="JC0-Fh-ypT"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-MN-6iO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH6-g4-w09">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Syed Nabi Raza Abidi was born and raised in Alipour, India into a religious, Syed family from both parents. After completing his early education at the age of 14, he moved to Iran to pursue further Islamic studies. He spent the first 2 years learning Farsi, basic Arabic grammar, and Ahkam in Najafabad, Isfahan, and then relocated to Qom for approximately 13 years. In Qom, he studied at renowned Islamic seminaries and institutes such as the Institute of Imam Jafar as-Sadiq under the guidance of Ayatollah Jafar Subhani while concurrently earning his PhD in Theology and Philosophy from a sister school at the University of Tehran. Upon completing his lower level studies, he began his higher hawzah education, Dars al-Kharij, under many reputable scholars, such as Ayatollah Fadhel Lankarani, Ayatullah Bahjat, and Ayatollah Jafer Subhani. 
+                                <mutableString key="text">Imam and Resident Aalim - Dr. Nabi Raza Abidi 
+Syed Nabi Raza Abidi was born and raised in Alipour, India into a religious, Syed family from both parents. After completing his early education at the age of 14, he moved to Iran to pursue further Islamic studies. He spent the first 2 years learning Farsi, basic Arabic grammar, and Ahkam in Najafabad, Isfahan, and then relocated to Qom for approximately 13 years. In Qom, he studied at renowned Islamic seminaries and institutes such as the Institute of Imam Jafar as-Sadiq under the guidance of Ayatollah Jafar Subhani while concurrently earning his PhD in Theology and Philosophy from a sister school at the University of Tehran. Upon completing his lower level studies, he began his higher hawzah education, Dars al-Kharij, under many reputable scholars, such as Ayatollah Fadhel Lankarani, Ayatullah Bahjat, and Ayatollah Jafer Subhani.
 Parallel to his studies, he spent several years answering questions in the office of Grand Ayatollah Fadhel Lankarani, conducting research in theology and philosophy under the guidance of Ayatollah Jafar Subhani, and teaching subjects such as Usool, Fiqh, Philosophy, and Tafseer in different schools. 
 After completing his studies in 1999, he returned to India and taught at the University of Alighar while simultaneously serving and helping different communities. He also conducted business in Dubai, and then moved to Japan in 2000, where he established a business and helped develop a community and Islamic center. 
 In 2002, Syed Abidi moved to San Jose, CA to serve as the Resident Aalim of SABA Islamic Center, and has done so for the past 13+ years. Under his guidance and the dedicated help of the community, SABA has progressed significantly in these years, including the opening of a full-time school and the development of educational curricula. 
 During his time in the Bay Area, he has participated in many interfaith and intrafaith events, spearheaded projects for the underprivileged, and played an integral role in the education realm. He also delivers lectures at churches and mosques throughout the country and advises several local and out of state mosques and Islamic community centers. 
 He continues to further his studies through research and occasional classes.
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mTV-HP-eyU" firstAttribute="top" secondItem="noB-AP-OQ5" secondAttribute="bottom" id="0Yn-lx-L79"/>
-                            <constraint firstItem="c3o-MN-6iO" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" id="14e-F5-gKa"/>
-                            <constraint firstItem="mTV-HP-eyU" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" id="25X-Qc-tam"/>
-                            <constraint firstAttribute="trailing" secondItem="mTV-HP-eyU" secondAttribute="trailing" id="MvJ-9j-A9i"/>
-                            <constraint firstAttribute="trailing" secondItem="c3o-MN-6iO" secondAttribute="trailing" id="UvV-4O-Dgc"/>
-                            <constraint firstItem="4o9-Nh-PFj" firstAttribute="top" secondItem="c3o-MN-6iO" secondAttribute="bottom" id="cw2-pT-5RY"/>
-                            <constraint firstItem="c3o-MN-6iO" firstAttribute="top" secondItem="mTV-HP-eyU" secondAttribute="bottom" id="mgM-Cc-ItM"/>
+                            <constraint firstItem="FH6-g4-w09" firstAttribute="top" secondItem="6Em-bz-N8g" secondAttribute="bottom" constant="8" id="2ZA-uw-keD"/>
+                            <constraint firstAttribute="trailing" secondItem="FH6-g4-w09" secondAttribute="trailing" constant="16" id="85O-OX-Axj"/>
+                            <constraint firstItem="6Em-bz-N8g" firstAttribute="top" secondItem="noB-AP-OQ5" secondAttribute="bottom" id="8sz-bb-DLm"/>
+                            <constraint firstItem="FH6-g4-w09" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" constant="16" id="Ltw-vI-7VI"/>
+                            <constraint firstAttribute="trailing" secondItem="6Em-bz-N8g" secondAttribute="trailing" id="SDg-t0-49o"/>
+                            <constraint firstItem="6Em-bz-N8g" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leading" id="SLe-Nw-VRP"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjt-aR-t8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="2481"/>
+            <point key="canvasLocation" x="-562.39999999999998" y="2417.5412293853074"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Bny-jA-jAD">
@@ -685,7 +686,7 @@ He continues to further his studies through research and occasional classes.
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7WI-ZR-mJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2888" y="2481"/>
+            <point key="canvasLocation" x="-2889" y="2955"/>
         </scene>
     </scenes>
     <resources>
@@ -702,5 +703,5 @@ He continues to further his studies through research and occasional classes.
         <image name="Share" width="25" height="25"/>
         <image name="sabaLogo" width="480" height="377"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+    <color key="tintColor" red="0.16470588235294117" green="0.70196078431372544" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
