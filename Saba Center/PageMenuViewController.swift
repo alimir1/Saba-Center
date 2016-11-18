@@ -99,10 +99,10 @@ extension PageMenuViewController {
             .menuItemSeparatorWidth(3.5),
             .useMenuLikeSegmentedControl(true),
             .menuItemSeparatorPercentageHeight(0.1),
-            .selectedMenuItemLabelColor(themeColor),
-            .unselectedMenuItemLabelColor(UIColor.black),
+            .selectedMenuItemLabelColor(UIColor.white),
+            .unselectedMenuItemLabelColor(UIColor.white),
             .selectionIndicatorColor(themeColor),
-            .scrollMenuBackgroundColor(UIColor.white),
+            .scrollMenuBackgroundColor(UIColor.brown),
         ]
         
         // Initialize page menu with controller array, frame, and optional parameters
