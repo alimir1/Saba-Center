@@ -37,7 +37,7 @@ extension WeeklyProgramsViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "weeklyProgramCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "weeklyProgramCell", for: indexPath) as! WeeklyProgramsCell
         let schedule = timeTable[indexPath.row]
         
         let program = try! NSAttributedString(
@@ -45,8 +45,11 @@ extension WeeklyProgramsViewController {
             options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
             documentAttributes: nil)
         
-        cell.textLabel?.text = schedule.time
-        cell.detailTextLabel?.text = program.string
+//        cell.textLabel?.text = schedule.time
+//        cell.detailTextLabel?.text = program.string
+        
+        cell.time.text = schedule.time
+        cell.program.text  = program.string
         
         return cell
     }

@@ -25,6 +25,7 @@
 		49392FF41DDBCA1500BEA705 /* ResidentAlimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49392FF31DDBCA1500BEA705 /* ResidentAlimViewController.swift */; };
 		4950E8071DDE611D00765FD2 /* IslamicMonths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950E8061DDE611D00765FD2 /* IslamicMonths.swift */; };
 		49A212F21DDBFF3300514A66 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */; };
+		49B71B631DDE9D28004353B2 /* WeeklyProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B71B621DDE9D27004353B2 /* WeeklyProgramsCell.swift */; };
 		49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */; };
 		49C571B61DDAA484008C9558 /* WeeklyProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */; };
 		49D5DA751DDE38C700BF929E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D5DA741DDE38C700BF929E /* ActivityIndicator.swift */; };
@@ -54,6 +55,7 @@
 		49392FF31DDBCA1500BEA705 /* ResidentAlimViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidentAlimViewController.swift; sourceTree = "<group>"; };
 		4950E8061DDE611D00765FD2 /* IslamicMonths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IslamicMonths.swift; sourceTree = "<group>"; };
 		49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		49B71B621DDE9D27004353B2 /* WeeklyProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsCell.swift; sourceTree = "<group>"; };
 		49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingProgramsCell.swift; sourceTree = "<group>"; };
 		49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsViewController.swift; sourceTree = "<group>"; };
 		49D5DA741DDE38C700BF929E /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */,
+				49B71B621DDE9D27004353B2 /* WeeklyProgramsCell.swift */,
 				49D5DA741DDE38C700BF929E /* ActivityIndicator.swift */,
 			);
 			name = Views;
@@ -315,6 +318,7 @@
 				4902FFD71DD629F500E54871 /* PrayTime.m in Sources */,
 				49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */,
 				49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */,
+				49B71B631DDE9D28004353B2 /* WeeklyProgramsCell.swift in Sources */,
 				492836331DD7A17C00909041 /* PrayerTimeModel.swift in Sources */,
 				49368D941DCFFC6B00D3257D /* GoogleDocsConvenience.swift in Sources */,
 				49A212F21DDBFF3300514A66 /* AboutTableViewController.swift in Sources */,
