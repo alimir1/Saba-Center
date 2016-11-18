@@ -63,7 +63,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="IuO-AS-NS1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.88369359849875229" green="1" blue="0.94220525104396236" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="prayTimeCell" textLabel="E9t-0U-rm2" detailTextLabel="97x-lp-FsZ" style="IBUITableViewCellStyleValue1" id="M43-wZ-IXo">
@@ -89,6 +89,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94991312077343926" green="0.99787860671787532" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -97,6 +98,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Prayer Times" id="P22-nr-NTj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="NoW-aa-nwP"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="i0T-cW-2nv">
                             <connections>
                                 <action selector="refreshTableWithSender:" destination="T53-WA-JrN" id="OoY-oJ-S3p"/>
@@ -692,5 +694,5 @@ He continues to further his studies through research and occasional classes.
         <image name="Share" width="25" height="25"/>
         <image name="sabaLogo" width="480" height="377"/>
     </resources>
-    <color key="tintColor" red="0.16470588235294117" green="0.70196078431372544" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

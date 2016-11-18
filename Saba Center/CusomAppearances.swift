@@ -1,15 +1,24 @@
 //
-//  ActivityIndicator.swift
+//  CusomAppearances.swift
 //  Saba Center
 //
-//  Created by Ali Mir on 11/17/16.
+//  Created by Ali Mir on 11/18/16.
 //  Copyright © 2016 com.AliMir. All rights reserved.
 //
 
 import UIKit
 
+struct NavigationBarAppearance {
+    static func setCustomAppearance(navigationBar: UINavigationBar) {
+        let color = UIColor(red:0.16, green:0.70, blue:0.40, alpha:1.0)
+        navigationBar.tintColor = UIColor.white
+        navigationBar.barTintColor = color
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+}
+
 struct ActivityIndicator {
-    
     let viewForActivityIndicator = UIView()
     let view: UIView
     let navigationController: UINavigationController?

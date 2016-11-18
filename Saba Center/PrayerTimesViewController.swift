@@ -9,7 +9,6 @@
 import UIKit
 import CoreLocation
 import Contacts
-import AddressBookUI
 
 class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegate {
     
@@ -115,16 +114,17 @@ extension PrayerTimesViewController {
         formatter.dateStyle = DateFormatter.Style.long
         let dateString = formatter.string(from: Date())
         
-//        let islamicDateComponents = Calendar(identifier: .islamicTabular).dateComponents(in: TimeZone.current, from: Date())
-//        
-//        let islamicDate: String?
-//        
-//        if let day = islamicDateComponents.day, let month = islamicDateComponents.month, let year = islamicDateComponents.year, let islamicMonth = IslamicMonths(rawValue: month)?.string {
-//            islamicDate = "\(islamicMonth) \(day), \(year)"
-//        }
-//        islamicDate != nil ? islamicDate! : "dsf"
-//        let lksd = islamicDate == nil ? "dsf" : ""
-        return dateString
+        let islamicDateComponents = Calendar(identifier: .islamicTabular).dateComponents(in: TimeZone.current, from: Date())
+        
+        var islamicDate: String? = nil
+        
+        if let day = islamicDateComponents.day, let month = islamicDateComponents.month, let year = islamicDateComponents.year, let islamicMonth = IslamicMonths(rawValue: month)?.string {
+            islamicDate = "\(islamicMonth) \(day), \(year)"
+        }
+        
+        let islamicDateString = (islamicDate == nil) ? "" : "\n\(islamicDate!)"
+        
+        return dateString + islamicDateString
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -166,7 +166,7 @@ extension PrayerTimesViewController {
         if let userCoordinates = manager.location?.coordinate {
             self.userLocation = userCoordinates
             self.tableView.reloadData()
-            print("user location: \(userCoordinates)")
+            print("User Location: \(userCoordinates)")
         } else {
             let alertCtrl = UIAlertController(
                 title: "Could not get your location.",
