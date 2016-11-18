@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UGt-X9-13L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o56-Iv-etk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -413,7 +413,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUO-Ym-Jpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2122" y="2955"/>
+            <point key="canvasLocation" x="-2121" y="2471"/>
         </scene>
         <!--About-->
         <scene sceneID="5Zt-Xo-gtc">
@@ -591,12 +591,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjS-PR-LYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1375" y="2418"/>
+            <point key="canvasLocation" x="-1314" y="2248"/>
         </scene>
         <!--Moulana Nabi Raza Abidi-->
         <scene sceneID="X1w-kL-hBU">
             <objects>
-                <viewController title="Moulana Nabi Raza Abidi" id="UGt-X9-13L" customClass="ResidentAlimViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Moulana Nabi Raza Abidi" automaticallyAdjustsScrollViewInsets="NO" id="UGt-X9-13L" customClass="ResidentAlimViewController" customModule="Saba_Center" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="noB-AP-OQ5"/>
                         <viewControllerLayoutGuide type="bottom" id="4o9-Nh-PFj"/>
@@ -610,18 +610,18 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8RT-xx-ZLa" userLabel="Content View">
                                         <rect key="frame" x="8" y="-56" width="359" height="538"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vv3-bY-viw">
-                                                <frame key="frameInset" minX="8" minY="8" width="343" height="522"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vv3-bY-viw">
+                                                <frame key="frameInset" minX="21" minY="8" width="317" height="522"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                                <color key="textColor" red="0.070332532051282093" green="0.070332532051282093" blue="0.070332532051282093" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="538" id="3XV-nc-erf"/>
-                                            <constraint firstAttribute="trailing" secondItem="vv3-bY-viw" secondAttribute="trailing" constant="8" id="6Am-DV-wCD"/>
-                                            <constraint firstItem="vv3-bY-viw" firstAttribute="leading" secondItem="8RT-xx-ZLa" secondAttribute="leading" constant="8" id="E1A-4X-YWe"/>
+                                            <constraint firstAttribute="trailing" secondItem="vv3-bY-viw" secondAttribute="trailing" constant="21" id="6Am-DV-wCD"/>
+                                            <constraint firstItem="vv3-bY-viw" firstAttribute="leading" secondItem="8RT-xx-ZLa" secondAttribute="leading" constant="21" id="E1A-4X-YWe"/>
                                             <constraint firstAttribute="width" constant="359" id="Kzk-UX-BZ5"/>
                                             <constraint firstItem="vv3-bY-viw" firstAttribute="top" secondItem="8RT-xx-ZLa" secondAttribute="top" constant="8" id="Zoo-1r-ug1"/>
                                         </constraints>
@@ -641,8 +641,6 @@
                             <constraint firstItem="8RT-xx-ZLa" firstAttribute="leading" secondItem="o5c-hf-SOV" secondAttribute="leadingMargin" constant="-8" id="23m-et-Xnt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8RT-xx-ZLa" secondAttribute="trailing" constant="-8" id="4IQ-RT-Psu"/>
                             <constraint firstAttribute="trailing" secondItem="jc5-XS-uDV" secondAttribute="trailing" id="6kp-sP-XFS"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="vv3-bY-viw" secondAttribute="leading" id="EdA-Ca-q99"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vv3-bY-viw" secondAttribute="trailing" id="F8C-Bf-BT7"/>
                             <constraint firstItem="jc5-XS-uDV" firstAttribute="top" secondItem="noB-AP-OQ5" secondAttribute="bottom" id="p2D-CB-vhT"/>
                             <constraint firstItem="4o9-Nh-PFj" firstAttribute="top" secondItem="jc5-XS-uDV" secondAttribute="bottom" id="pEf-Gg-Gff"/>
                         </constraints>
@@ -655,7 +653,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjt-aR-t8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562.39999999999998" y="2417.5412293853074"/>
+            <point key="canvasLocation" x="-503.19999999999999" y="2247.5262368815593"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Bny-jA-jAD">
@@ -684,7 +682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUi-aO-U4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3889" y="2334"/>
+            <point key="canvasLocation" x="-3663" y="2284"/>
         </scene>
         <!--More-->
         <scene sceneID="8G3-Vv-J7C">
@@ -703,7 +701,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7WI-ZR-mJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2889" y="2955"/>
+            <point key="canvasLocation" x="-2889" y="2471"/>
         </scene>
     </scenes>
     <resources>
