@@ -36,15 +36,6 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dateComponents = Calendar(identifier: .islamicTabular).dateComponents(in: TimeZone.current, from: Date())
-        
-        // Set Islamic calendar in navigationItem
-        if let day = dateComponents.day, let month = dateComponents.month, let year = dateComponents.year, let islamicMonth = IslamicMonths(rawValue: month)?.string {
-            self.navigationItem.title = "\(islamicMonth) \(day), \(year)"
-        } else {
-            self.navigationItem.title = "Prayer Times"
-        }
-
         startLocation()
     }
 
@@ -111,6 +102,29 @@ extension PrayerTimesViewController {
         if let headerView = view as? UITableViewHeaderFooterView {
             headerView.textLabel?.textAlignment = .center
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        if let footerView = view as? UITableViewHeaderFooterView {
+            footerView.textLabel?.textAlignment = .center
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.long
+        let dateString = formatter.string(from: Date())
+        
+//        let islamicDateComponents = Calendar(identifier: .islamicTabular).dateComponents(in: TimeZone.current, from: Date())
+//        
+//        let islamicDate: String?
+//        
+//        if let day = islamicDateComponents.day, let month = islamicDateComponents.month, let year = islamicDateComponents.year, let islamicMonth = IslamicMonths(rawValue: month)?.string {
+//            islamicDate = "\(islamicMonth) \(day), \(year)"
+//        }
+//        islamicDate != nil ? islamicDate! : "dsf"
+//        let lksd = islamicDate == nil ? "dsf" : ""
+        return dateString
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

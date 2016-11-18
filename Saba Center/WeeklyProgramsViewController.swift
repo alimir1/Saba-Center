@@ -45,9 +45,6 @@ extension WeeklyProgramsViewController {
             options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
             documentAttributes: nil)
         
-//        cell.textLabel?.text = schedule.time
-//        cell.detailTextLabel?.text = program.string
-        
         cell.time.text = schedule.time
         cell.program.text  = program.string
         

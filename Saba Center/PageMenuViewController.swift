@@ -82,6 +82,7 @@ extension PageMenuViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewCtrl = storyboard.instantiateViewController(withIdentifier: "weeklyPrograms") as! WeeklyProgramsViewController
             viewCtrl.title = SabaCenterData.WeeklyProgram.DaysOfTheWeek(rawValue: program.day)?.getAbbreviatedDayString ?? program.day
+            viewCtrl.timeTable.append(SabaCenterData.Schedule(time: "Date", program: "\(program.englishDate) / \(program.hijriDate)"))
             for schedule in program.schedules {
                 if schedule.time != "<br>" {
                     viewCtrl.timeTable.append(schedule)
