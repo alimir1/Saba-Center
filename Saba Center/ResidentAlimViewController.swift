@@ -17,7 +17,12 @@ class ResidentAlimViewController: UIViewController {
     
     var textForLabel: String? {
         didSet {
-            aboutLabel.text = textForLabel!
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 7.0
+            let pageDescription = NSMutableAttributedString(string: textForLabel!)
+            pageDescription.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range:NSMakeRange(0, pageDescription.length))
+            aboutLabel.attributedText = pageDescription
+            viewHeightConstraint.constant = viewHeightConstraint.constant + aboutLabel.reqiuredHeight
         }
     }
     
@@ -36,7 +41,6 @@ class ResidentAlimViewController: UIViewController {
 
 extension ResidentAlimViewController {
     func configureScrollViewHeader() {
-        viewHeightConstraint.constant = viewHeightConstraint.constant + aboutLabel.reqiuredHeight
         headerView.image = #imageLiteral(resourceName: "MoulanaAbidi")
         headerView.contentMode = .scaleAspectFill
         scrollView.parallaxHeader.view = headerView
