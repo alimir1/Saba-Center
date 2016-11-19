@@ -30,12 +30,28 @@
 		49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */; };
 		49C571B61DDAA484008C9558 /* WeeklyProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */; };
 		94A9372DEF662ADC63FCD6BE /* Pods_Saba_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */; };
+		D7DC1DA1DC5E653C3013BFC3 /* Pods_SabaCenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB69F2B5180C86C53D9F8CC /* Pods_SabaCenterTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		49105C1C1DE0A9F000A58C5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49368D6F1DCF8EC600D3257D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49368D761DCF8EC800D3257D;
+			remoteInfo = "Saba Center";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		18624B3DF63ABDC46043E496 /* Pods-SabaCenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SabaCenterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2DB69F2B5180C86C53D9F8CC /* Pods_SabaCenterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SabaCenterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4902FFD41DD629C400E54871 /* PrayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrayTime.h; sourceTree = "<group>"; };
 		4902FFD51DD629F400E54871 /* Saba Center-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Saba Center-Bridging-Header.h"; sourceTree = "<group>"; };
 		4902FFD61DD629F500E54871 /* PrayTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayTime.m; sourceTree = "<group>"; };
+		49105C171DE0A9EF00A58C5F /* SabaCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabaCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49105C191DE0A9EF00A58C5F /* SabaCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabaCenterTests.swift; sourceTree = "<group>"; };
+		49105C1B1DE0A9F000A58C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		492836301DD6431100909041 /* PrayerTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewController.swift; sourceTree = "<group>"; };
 		492836321DD7A17C00909041 /* PrayerTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimeModel.swift; sourceTree = "<group>"; };
 		492836361DD7B23600909041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -61,10 +77,19 @@
 		49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsViewController.swift; sourceTree = "<group>"; };
 		5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saba_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6AB722BB8D7EFAD34F5906 /* Pods-Saba Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.debug.xcconfig"; sourceTree = "<group>"; };
+		671705810A1454DA5C5D359F /* Pods-SabaCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SabaCenterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB2A168F188672C3C446468C /* Pods-Saba Center.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		49105C141DE0A9EF00A58C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DC1DA1DC5E653C3013BFC3 /* Pods_SabaCenterTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49368D741DCF8EC800D3257D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,6 +111,15 @@
 				4902FFD51DD629F400E54871 /* Saba Center-Bridging-Header.h */,
 			);
 			name = PrayTime;
+			sourceTree = "<group>";
+		};
+		49105C181DE0A9EF00A58C5F /* SabaCenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				49105C191DE0A9EF00A58C5F /* SabaCenterTests.swift */,
+				49105C1B1DE0A9F000A58C5F /* Info.plist */,
+			);
+			path = SabaCenterTests;
 			sourceTree = "<group>";
 		};
 		492836341DD7A49B00909041 /* Controllers */ = {
@@ -115,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				49368D791DCF8ED500D3257D /* Saba Center */,
+				49105C181DE0A9EF00A58C5F /* SabaCenterTests */,
 				49368D781DCF8ED500D3257D /* Products */,
 				FD45A59329B8BA3DE79DA5A5 /* Pods */,
 				6939F8E49B716A9157CFF0E2 /* Frameworks */,
@@ -125,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				49368D771DCF8ED500D3257D /* Saba Center.app */,
+				49105C171DE0A9EF00A58C5F /* SabaCenterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */,
+				2DB69F2B5180C86C53D9F8CC /* Pods_SabaCenterTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,6 +216,8 @@
 			children = (
 				5A6AB722BB8D7EFAD34F5906 /* Pods-Saba Center.debug.xcconfig */,
 				DB2A168F188672C3C446468C /* Pods-Saba Center.release.xcconfig */,
+				18624B3DF63ABDC46043E496 /* Pods-SabaCenterTests.debug.xcconfig */,
+				671705810A1454DA5C5D359F /* Pods-SabaCenterTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -186,6 +225,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		49105C161DE0A9EF00A58C5F /* SabaCenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49105C201DE0A9F000A58C5F /* Build configuration list for PBXNativeTarget "SabaCenterTests" */;
+			buildPhases = (
+				8672269B4222B458E692D682 /* [CP] Check Pods Manifest.lock */,
+				49105C131DE0A9EF00A58C5F /* Sources */,
+				49105C141DE0A9EF00A58C5F /* Frameworks */,
+				49105C151DE0A9EF00A58C5F /* Resources */,
+				BF9869CACA6F5F7637EA5D2F /* [CP] Embed Pods Frameworks */,
+				325B52F02C02364A3FE5D418 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49105C1D1DE0A9F000A58C5F /* PBXTargetDependency */,
+			);
+			name = SabaCenterTests;
+			productName = SabaCenterTests;
+			productReference = 49105C171DE0A9EF00A58C5F /* SabaCenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		49368D761DCF8EC800D3257D /* Saba Center */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49368D891DCF8ED900D3257D /* Build configuration list for PBXNativeTarget "Saba Center" */;
@@ -216,6 +276,12 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = com.AliMir;
 				TargetAttributes = {
+					49105C161DE0A9EF00A58C5F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 396S2E45WK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49368D761DCF8EC800D3257D;
+					};
 					49368D761DCF8EC800D3257D = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 396S2E45WK;
@@ -238,11 +304,19 @@
 			projectRoot = "";
 			targets = (
 				49368D761DCF8EC800D3257D /* Saba Center */,
+				49105C161DE0A9EF00A58C5F /* SabaCenterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		49105C151DE0A9EF00A58C5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49368D751DCF8EC800D3257D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +346,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		325B52F02C02364A3FE5D418 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8672269B4222B458E692D682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		A37EEF43E51FFAC5D1DF3C31 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +389,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF9869CACA6F5F7637EA5D2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E87A791FD2ADC950D89EA230 /* [CP] Embed Pods Frameworks */ = {
@@ -305,6 +424,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		49105C131DE0A9EF00A58C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49368D731DCF8EC800D3257D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +458,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		49105C1D1DE0A9F000A58C5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49368D761DCF8EC800D3257D /* Saba Center */;
+			targetProxy = 49105C1C1DE0A9F000A58C5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		49368D7E1DCF8ED700D3257D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -352,6 +486,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		49105C1E1DE0A9F000A58C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18624B3DF63ABDC46043E496 /* Pods-SabaCenterTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 396S2E45WK;
+				INFOPLIST_FILE = SabaCenterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SabaCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saba Center.app/Saba Center";
+			};
+			name = Debug;
+		};
+		49105C1F1DE0A9F000A58C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671705810A1454DA5C5D359F /* Pods-SabaCenterTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 396S2E45WK;
+				INFOPLIST_FILE = SabaCenterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SabaCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saba Center.app/Saba Center";
+			};
+			name = Release;
+		};
 		49368D871DCF8ED900D3257D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -481,6 +647,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		49105C201DE0A9F000A58C5F /* Build configuration list for PBXNativeTarget "SabaCenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49105C1E1DE0A9F000A58C5F /* Debug */,
+				49105C1F1DE0A9F000A58C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		49368D721DCF8EC700D3257D /* Build configuration list for PBXProject "Saba Center" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

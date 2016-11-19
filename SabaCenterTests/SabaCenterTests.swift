@@ -1,0 +1,35 @@
+//
+//  SabaCenterTests.swift
+//  SabaCenterTests
+//
+//  Created by Ali Mir on 11/19/16.
+//  Copyright © 2016 com.AliMir. All rights reserved.
+//
+
+import XCTest
+@testable import Saba_Center
+
+class SabaCenterTests: XCTestCase {
+    
+    var residentAlimVC: ResidentAlimViewController?
+    
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    func testconfigureScrollViewHeader() {
+        if let residentAlimVC = residentAlimVC {
+            residentAlimVC.textForLabel = "Helwkdjklsf dslkfj sdlkfsdjflksdfsdjflkdsf\nsdlkf\ndslk\ndsfdsfwefewf\ndslkflwekfweklf\nlwekfnewlkfnewlf\nwefefewf"
+            XCTAssert(residentAlimVC.viewHeightConstraint.constant > 5000)
+        } else {
+            print("sdlkdsksd")
+        }
+    }
+    
+}
