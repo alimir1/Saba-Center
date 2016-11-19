@@ -16,6 +16,30 @@ class AboutTableViewController: UITableViewController {
     }
 }
 
+// MARK: - Navigation
+
+extension AboutTableViewController {
+    
+    enum SegueIDs: String {
+        case residentAlim, history
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case SegueIDs.residentAlim.rawValue:
+            let residentAlimVC = segue.destination as! DisplayInformationViewController
+            residentAlimVC.pageAttributedText = SabaInfo.Informations.residentAlim.attributedString
+            residentAlimVC.headerView.image = #imageLiteral(resourceName: "MoulanaAbidi")
+        case SegueIDs.history.rawValue:
+            let historyVC = segue.destination as! DisplayInformationViewController
+            historyVC.pageAttributedText = SabaInfo.Informations.history.attributedString
+            historyVC.headerView.image = #imageLiteral(resourceName: "PlaceHolder")
+        default:
+            break
+        }
+    }
+}
+
 // MARK: - Table View
 
 extension AboutTableViewController {

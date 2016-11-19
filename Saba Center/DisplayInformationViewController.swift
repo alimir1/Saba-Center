@@ -11,29 +11,21 @@ import MXParallaxHeader
 
 class DisplayInformationViewController: UIViewController {
     
+    
+    // MARK: - Properties
+    
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var testHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var scrollView: UIScrollView!
-    let headerView = UIImageView()
+    
+    var headerView = UIImageView()
+    var pageAttributedText: NSAttributedString = NSAttributedString(string: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let textForLabel  = "Syed Nabi Raza Abidi was born and raised in Alipur, Karnataka (India) into a religious, Syed family from both parents.\nldskjldksfjdsf\nlksdjfdlksfjds\nlksdjfkldsjfdls\nlkjdslkfjdsklfj"
-        
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 5.5
-        let pageTitleAttributes = [NSForegroundColorAttributeName: UIColor.gray]
-        let pageDescriptionAttributes = [NSParagraphStyleAttributeName : paragraphStyle]
-        let pageTitleText = NSMutableAttributedString(string: "Moulana Nabi Raza Abidi\nResident A'lim of Saba\n\n", attributes: pageTitleAttributes)
-        let pageDescriptionText = NSAttributedString(string: textForLabel, attributes: pageDescriptionAttributes)
-        pageTitleText.append(pageDescriptionText)
-        
-        
-        testLabel.attributedText = pageTitleText
-        testHeightConstraint.constant = 20.0
+        testLabel.attributedText = pageAttributedText
+        testHeightConstraint.constant = 30.0
         
         configureScrollViewHeader()
         
@@ -44,7 +36,6 @@ class DisplayInformationViewController: UIViewController {
 
 extension DisplayInformationViewController {
     func configureScrollViewHeader() {
-        headerView.image = #imageLiteral(resourceName: "MoulanaAbidi")
         headerView.contentMode = .scaleAspectFill
         scrollView.parallaxHeader.view = headerView
         scrollView.parallaxHeader.height = 200

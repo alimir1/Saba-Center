@@ -25,6 +25,7 @@
 		49392FF21DDB9F3200BEA705 /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49392FF11DDB9F3100BEA705 /* PageMenuViewController.swift */; };
 		4950E8071DDE611D00765FD2 /* IslamicMonths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950E8061DDE611D00765FD2 /* IslamicMonths.swift */; };
 		495949711DE0E72700E46FED /* DisplayInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495949701DE0E72700E46FED /* DisplayInformationViewController.swift */; };
+		495949741DE0F0D300E46FED /* SabaInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495949731DE0F0D300E46FED /* SabaInfoModel.swift */; };
 		499C4AED1DDF5C4D00102D75 /* CusomAppearances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C4AEC1DDF5C4D00102D75 /* CusomAppearances.swift */; };
 		49A212F21DDBFF3300514A66 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */; };
 		49B71B631DDE9D28004353B2 /* WeeklyProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B71B621DDE9D27004353B2 /* WeeklyProgramsCell.swift */; };
@@ -68,6 +69,7 @@
 		49392FF11DDB9F3100BEA705 /* PageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
 		4950E8061DDE611D00765FD2 /* IslamicMonths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IslamicMonths.swift; sourceTree = "<group>"; };
 		495949701DE0E72700E46FED /* DisplayInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInformationViewController.swift; sourceTree = "<group>"; };
+		495949731DE0F0D300E46FED /* SabaInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SabaInfoModel.swift; sourceTree = "<group>"; };
 		499C4AEC1DDF5C4D00102D75 /* CusomAppearances.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CusomAppearances.swift; sourceTree = "<group>"; };
 		49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		49B71B621DDE9D27004353B2 /* WeeklyProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsCell.swift; sourceTree = "<group>"; };
@@ -178,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				4902FFD81DD62A1800E54871 /* PrayTime */,
-				49368D8E1DCFF4F000D3257D /* SabaGoogleDocs */,
+				495949721DE0F07800E46FED /* Saba */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -189,9 +191,18 @@
 				49368D931DCFFC6B00D3257D /* GoogleDocsConvenience.swift */,
 				49368D8F1DCFF54100D3257D /* GoogleDocsClient.swift */,
 				49368D911DCFF59900D3257D /* GoogleDocsConstants.swift */,
-				49368D951DCFFDC700D3257D /* SabaCenterData.swift */,
 			);
 			name = SabaGoogleDocs;
+			sourceTree = "<group>";
+		};
+		495949721DE0F07800E46FED /* Saba */ = {
+			isa = PBXGroup;
+			children = (
+				495949731DE0F0D300E46FED /* SabaInfoModel.swift */,
+				49368D951DCFFDC700D3257D /* SabaCenterData.swift */,
+				49368D8E1DCFF4F000D3257D /* SabaGoogleDocs */,
+			);
+			name = Saba;
 			sourceTree = "<group>";
 		};
 		49F3754F1DE0C41B003268C8 /* SabaCenterTests */ = {
@@ -445,6 +456,7 @@
 				49392FF21DDB9F3200BEA705 /* PageMenuViewController.swift in Sources */,
 				49368D7B1DCF8ED600D3257D /* AppDelegate.swift in Sources */,
 				49368D901DCFF54100D3257D /* GoogleDocsClient.swift in Sources */,
+				495949741DE0F0D300E46FED /* SabaInfoModel.swift in Sources */,
 				499C4AED1DDF5C4D00102D75 /* CusomAppearances.swift in Sources */,
 				49368D921DCFF59900D3257D /* GoogleDocsConstants.swift in Sources */,
 			);
