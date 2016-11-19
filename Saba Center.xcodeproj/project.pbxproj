@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358D1EB843C0A231EF4C8D5B /* Pods_SabaCenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB69F2B5180C86C53D9F8CC /* Pods_SabaCenterTests.framework */; };
 		4902FFD71DD629F500E54871 /* PrayTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4902FFD61DD629F500E54871 /* PrayTime.m */; };
 		492836311DD6431100909041 /* PrayerTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492836301DD6431100909041 /* PrayerTimesViewController.swift */; };
 		492836331DD7A17C00909041 /* PrayerTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492836321DD7A17C00909041 /* PrayerTimeModel.swift */; };
@@ -22,19 +23,19 @@
 		49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D951DCFFDC700D3257D /* SabaCenterData.swift */; };
 		49368D9A1DD51D5400D3257D /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49368D991DD51D5400D3257D /* GCD.swift */; };
 		49392FF21DDB9F3200BEA705 /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49392FF11DDB9F3100BEA705 /* PageMenuViewController.swift */; };
-		49392FF41DDBCA1500BEA705 /* ResidentAlimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49392FF31DDBCA1500BEA705 /* ResidentAlimViewController.swift */; };
 		4950E8071DDE611D00765FD2 /* IslamicMonths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950E8061DDE611D00765FD2 /* IslamicMonths.swift */; };
+		495949711DE0E72700E46FED /* DisplayInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495949701DE0E72700E46FED /* DisplayInformationViewController.swift */; };
 		499C4AED1DDF5C4D00102D75 /* CusomAppearances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C4AEC1DDF5C4D00102D75 /* CusomAppearances.swift */; };
 		49A212F21DDBFF3300514A66 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */; };
 		49B71B631DDE9D28004353B2 /* WeeklyProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B71B621DDE9D27004353B2 /* WeeklyProgramsCell.swift */; };
 		49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */; };
 		49C571B61DDAA484008C9558 /* WeeklyProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */; };
+		49F375511DE0C41B003268C8 /* SabaCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F375501DE0C41B003268C8 /* SabaCenterTests.swift */; };
 		94A9372DEF662ADC63FCD6BE /* Pods_Saba_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */; };
-		D7DC1DA1DC5E653C3013BFC3 /* Pods_SabaCenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB69F2B5180C86C53D9F8CC /* Pods_SabaCenterTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		49105C1C1DE0A9F000A58C5F /* PBXContainerItemProxy */ = {
+		49F375531DE0C41B003268C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49368D6F1DCF8EC600D3257D /* Project object */;
 			proxyType = 1;
@@ -49,9 +50,6 @@
 		4902FFD41DD629C400E54871 /* PrayTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrayTime.h; sourceTree = "<group>"; };
 		4902FFD51DD629F400E54871 /* Saba Center-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Saba Center-Bridging-Header.h"; sourceTree = "<group>"; };
 		4902FFD61DD629F500E54871 /* PrayTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayTime.m; sourceTree = "<group>"; };
-		49105C171DE0A9EF00A58C5F /* SabaCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabaCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49105C191DE0A9EF00A58C5F /* SabaCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabaCenterTests.swift; sourceTree = "<group>"; };
-		49105C1B1DE0A9F000A58C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		492836301DD6431100909041 /* PrayerTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewController.swift; sourceTree = "<group>"; };
 		492836321DD7A17C00909041 /* PrayerTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimeModel.swift; sourceTree = "<group>"; };
 		492836361DD7B23600909041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -68,13 +66,16 @@
 		49368D951DCFFDC700D3257D /* SabaCenterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SabaCenterData.swift; sourceTree = "<group>"; };
 		49368D991DD51D5400D3257D /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		49392FF11DDB9F3100BEA705 /* PageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
-		49392FF31DDBCA1500BEA705 /* ResidentAlimViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidentAlimViewController.swift; sourceTree = "<group>"; };
 		4950E8061DDE611D00765FD2 /* IslamicMonths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IslamicMonths.swift; sourceTree = "<group>"; };
+		495949701DE0E72700E46FED /* DisplayInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInformationViewController.swift; sourceTree = "<group>"; };
 		499C4AEC1DDF5C4D00102D75 /* CusomAppearances.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CusomAppearances.swift; sourceTree = "<group>"; };
 		49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		49B71B621DDE9D27004353B2 /* WeeklyProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsCell.swift; sourceTree = "<group>"; };
 		49C571AB1DDA76E1008C9558 /* UpcomingProgramsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingProgramsCell.swift; sourceTree = "<group>"; };
 		49C571B51DDAA484008C9558 /* WeeklyProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyProgramsViewController.swift; sourceTree = "<group>"; };
+		49F3754E1DE0C41B003268C8 /* SabaCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabaCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F375501DE0C41B003268C8 /* SabaCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabaCenterTests.swift; sourceTree = "<group>"; };
+		49F375521DE0C41B003268C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5156718A5BF7A60C09F4133D /* Pods_Saba_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saba_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6AB722BB8D7EFAD34F5906 /* Pods-Saba Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba Center.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center.debug.xcconfig"; sourceTree = "<group>"; };
 		671705810A1454DA5C5D359F /* Pods-SabaCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SabaCenterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,19 +83,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		49105C141DE0A9EF00A58C5F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D7DC1DA1DC5E653C3013BFC3 /* Pods_SabaCenterTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49368D741DCF8EC800D3257D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				94A9372DEF662ADC63FCD6BE /* Pods_Saba_Center.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F3754B1DE0C41B003268C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				358D1EB843C0A231EF4C8D5B /* Pods_SabaCenterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,15 +114,6 @@
 			name = PrayTime;
 			sourceTree = "<group>";
 		};
-		49105C181DE0A9EF00A58C5F /* SabaCenterTests */ = {
-			isa = PBXGroup;
-			children = (
-				49105C191DE0A9EF00A58C5F /* SabaCenterTests.swift */,
-				49105C1B1DE0A9F000A58C5F /* Info.plist */,
-			);
-			path = SabaCenterTests;
-			sourceTree = "<group>";
-		};
 		492836341DD7A49B00909041 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +122,7 @@
 				492836301DD6431100909041 /* PrayerTimesViewController.swift */,
 				49A212F11DDBFF3200514A66 /* AboutTableViewController.swift */,
 				492836381DDA2A7100909041 /* UpcomingProgramsViewController.swift */,
-				49392FF31DDBCA1500BEA705 /* ResidentAlimViewController.swift */,
+				495949701DE0E72700E46FED /* DisplayInformationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -149,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				49368D791DCF8ED500D3257D /* Saba Center */,
-				49105C181DE0A9EF00A58C5F /* SabaCenterTests */,
+				49F3754F1DE0C41B003268C8 /* SabaCenterTests */,
 				49368D781DCF8ED500D3257D /* Products */,
 				FD45A59329B8BA3DE79DA5A5 /* Pods */,
 				6939F8E49B716A9157CFF0E2 /* Frameworks */,
@@ -160,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				49368D771DCF8ED500D3257D /* Saba Center.app */,
-				49105C171DE0A9EF00A58C5F /* SabaCenterTests.xctest */,
+				49F3754E1DE0C41B003268C8 /* SabaCenterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +194,15 @@
 			name = SabaGoogleDocs;
 			sourceTree = "<group>";
 		};
+		49F3754F1DE0C41B003268C8 /* SabaCenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				49F375501DE0C41B003268C8 /* SabaCenterTests.swift */,
+				49F375521DE0C41B003268C8 /* Info.plist */,
+			);
+			path = SabaCenterTests;
+			sourceTree = "<group>";
+		};
 		6939F8E49B716A9157CFF0E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,27 +226,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		49105C161DE0A9EF00A58C5F /* SabaCenterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49105C201DE0A9F000A58C5F /* Build configuration list for PBXNativeTarget "SabaCenterTests" */;
-			buildPhases = (
-				8672269B4222B458E692D682 /* [CP] Check Pods Manifest.lock */,
-				49105C131DE0A9EF00A58C5F /* Sources */,
-				49105C141DE0A9EF00A58C5F /* Frameworks */,
-				49105C151DE0A9EF00A58C5F /* Resources */,
-				BF9869CACA6F5F7637EA5D2F /* [CP] Embed Pods Frameworks */,
-				325B52F02C02364A3FE5D418 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				49105C1D1DE0A9F000A58C5F /* PBXTargetDependency */,
-			);
-			name = SabaCenterTests;
-			productName = SabaCenterTests;
-			productReference = 49105C171DE0A9EF00A58C5F /* SabaCenterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		49368D761DCF8EC800D3257D /* Saba Center */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49368D891DCF8ED900D3257D /* Build configuration list for PBXNativeTarget "Saba Center" */;
@@ -266,6 +246,27 @@
 			productReference = 49368D771DCF8ED500D3257D /* Saba Center.app */;
 			productType = "com.apple.product-type.application";
 		};
+		49F3754D1DE0C41B003268C8 /* SabaCenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49F375571DE0C41B003268C8 /* Build configuration list for PBXNativeTarget "SabaCenterTests" */;
+			buildPhases = (
+				A0AD21F33E233199A247C8F3 /* [CP] Check Pods Manifest.lock */,
+				49F3754A1DE0C41B003268C8 /* Sources */,
+				49F3754B1DE0C41B003268C8 /* Frameworks */,
+				49F3754C1DE0C41B003268C8 /* Resources */,
+				ECBD66BB6B2203E0334463AA /* [CP] Embed Pods Frameworks */,
+				10A388E2723A1876B5B93C91 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49F375541DE0C41B003268C8 /* PBXTargetDependency */,
+			);
+			name = SabaCenterTests;
+			productName = SabaCenterTests;
+			productReference = 49F3754E1DE0C41B003268C8 /* SabaCenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -276,17 +277,17 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = com.AliMir;
 				TargetAttributes = {
-					49105C161DE0A9EF00A58C5F = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 396S2E45WK;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 49368D761DCF8EC800D3257D;
-					};
 					49368D761DCF8EC800D3257D = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 396S2E45WK;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+					};
+					49F3754D1DE0C41B003268C8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 396S2E45WK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49368D761DCF8EC800D3257D;
 					};
 				};
 			};
@@ -304,19 +305,12 @@
 			projectRoot = "";
 			targets = (
 				49368D761DCF8EC800D3257D /* Saba Center */,
-				49105C161DE0A9EF00A58C5F /* SabaCenterTests */,
+				49F3754D1DE0C41B003268C8 /* SabaCenterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		49105C151DE0A9EF00A58C5F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49368D751DCF8EC800D3257D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,9 +322,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49F3754C1DE0C41B003268C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10A388E2723A1876B5B93C91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		20ABA60BBEE9481D8B7576DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,22 +362,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		325B52F02C02364A3FE5D418 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8672269B4222B458E692D682 /* [CP] Check Pods Manifest.lock */ = {
+		A0AD21F33E233199A247C8F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,21 +392,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BF9869CACA6F5F7637EA5D2F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E87A791FD2ADC950D89EA230 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,16 +407,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saba Center/Pods-Saba Center-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		49105C131DE0A9EF00A58C5F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		ECBD66BB6B2203E0334463AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SabaCenterTests/Pods-SabaCenterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		49368D731DCF8EC800D3257D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,13 +433,13 @@
 				4950E8071DDE611D00765FD2 /* IslamicMonths.swift in Sources */,
 				492836311DD6431100909041 /* PrayerTimesViewController.swift in Sources */,
 				492836391DDA2A7100909041 /* UpcomingProgramsViewController.swift in Sources */,
-				49392FF41DDBCA1500BEA705 /* ResidentAlimViewController.swift in Sources */,
 				49C571B61DDAA484008C9558 /* WeeklyProgramsViewController.swift in Sources */,
 				4902FFD71DD629F500E54871 /* PrayTime.m in Sources */,
 				49C571AC1DDA76E1008C9558 /* UpcomingProgramsCell.swift in Sources */,
 				49368D961DCFFDC700D3257D /* SabaCenterData.swift in Sources */,
 				49B71B631DDE9D28004353B2 /* WeeklyProgramsCell.swift in Sources */,
 				492836331DD7A17C00909041 /* PrayerTimeModel.swift in Sources */,
+				495949711DE0E72700E46FED /* DisplayInformationViewController.swift in Sources */,
 				49368D941DCFFC6B00D3257D /* GoogleDocsConvenience.swift in Sources */,
 				49A212F21DDBFF3300514A66 /* AboutTableViewController.swift in Sources */,
 				49392FF21DDB9F3200BEA705 /* PageMenuViewController.swift in Sources */,
@@ -456,13 +450,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49F3754A1DE0C41B003268C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F375511DE0C41B003268C8 /* SabaCenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		49105C1D1DE0A9F000A58C5F /* PBXTargetDependency */ = {
+		49F375541DE0C41B003268C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 49368D761DCF8EC800D3257D /* Saba Center */;
-			targetProxy = 49105C1C1DE0A9F000A58C5F /* PBXContainerItemProxy */;
+			targetProxy = 49F375531DE0C41B003268C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -486,38 +488,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		49105C1E1DE0A9F000A58C5F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18624B3DF63ABDC46043E496 /* Pods-SabaCenterTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 396S2E45WK;
-				INFOPLIST_FILE = SabaCenterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SabaCenterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saba Center.app/Saba Center";
-			};
-			name = Debug;
-		};
-		49105C1F1DE0A9F000A58C5F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671705810A1454DA5C5D359F /* Pods-SabaCenterTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 396S2E45WK;
-				INFOPLIST_FILE = SabaCenterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SabaCenterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saba Center.app/Saba Center";
-			};
-			name = Release;
-		};
 		49368D871DCF8ED900D3257D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -617,9 +587,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 396S2E45WK;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Saba Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
@@ -634,9 +607,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 396S2E45WK;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Saba Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
@@ -644,18 +620,39 @@
 			};
 			name = Release;
 		};
+		49F375551DE0C41B003268C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18624B3DF63ABDC46043E496 /* Pods-SabaCenterTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 396S2E45WK;
+				INFOPLIST_FILE = SabaCenterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SabaCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saba Center.app/Saba Center";
+			};
+			name = Debug;
+		};
+		49F375561DE0C41B003268C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671705810A1454DA5C5D359F /* Pods-SabaCenterTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 396S2E45WK;
+				INFOPLIST_FILE = SabaCenterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SabaCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saba Center.app/Saba Center";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49105C201DE0A9F000A58C5F /* Build configuration list for PBXNativeTarget "SabaCenterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49105C1E1DE0A9F000A58C5F /* Debug */,
-				49105C1F1DE0A9F000A58C5F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		49368D721DCF8EC700D3257D /* Build configuration list for PBXProject "Saba Center" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -670,6 +667,15 @@
 			buildConfigurations = (
 				49368D8A1DCF8ED900D3257D /* Debug */,
 				49368D8B1DCF8ED900D3257D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49F375571DE0C41B003268C8 /* Build configuration list for PBXNativeTarget "SabaCenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F375551DE0C41B003268C8 /* Debug */,
+				49F375561DE0C41B003268C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
