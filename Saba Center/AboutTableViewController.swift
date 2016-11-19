@@ -28,10 +28,12 @@ extension AboutTableViewController {
         switch segue.identifier! {
         case SegueIDs.residentAlim.rawValue:
             let residentAlimVC = segue.destination as! DisplayInformationViewController
+            residentAlimVC.navigationController?.title = "Resident Alim"
             residentAlimVC.pageAttributedText = SabaInfo.Informations.residentAlim.attributedString
             residentAlimVC.headerView.image = #imageLiteral(resourceName: "MoulanaAbidi")
         case SegueIDs.history.rawValue:
             let historyVC = segue.destination as! DisplayInformationViewController
+            historyVC.navigationController?.title = "History"
             historyVC.pageAttributedText = SabaInfo.Informations.history.attributedString
             historyVC.headerView.image = #imageLiteral(resourceName: "PlaceHolder")
         default:
@@ -43,6 +45,15 @@ extension AboutTableViewController {
 // MARK: - Table View
 
 extension AboutTableViewController {
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return CGFloat.leastNormalMagnitude

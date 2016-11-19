@@ -481,24 +481,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sabaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-AK-zfq"/>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dm-76-B8t">
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="102" id="jpl-Z3-fZu"/>
-                                                    </constraints>
-                                                    <string key="text">SABA Center is a multicultural Islamic Center under the guidance of Sayyid Nabi Raza Abidi. Located in the SF Bay Area, SABA seeks to spread the message of Ahlul Bayt and provide a multilingual platform for Muslims all over the bay.</string>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8A-WX-dmd">
+                                                    <attributedString key="attributedText">
+                                                        <fragment>
+                                                            <string key="content">SABA Center is a multicultural Islamic Center under the guidance of Sayyid Nabi Raza Abidi. Located in the SF Bay Area, SABA seeks to spread the message of Ahlul Bayt and provide a multilingual platform for Muslims all over the bay.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="VFM-AK-zfq" firstAttribute="top" secondItem="G4j-cL-BoE" secondAttribute="topMargin" constant="21" id="9vV-5B-DBb"/>
-                                                <constraint firstItem="VFM-AK-zfq" firstAttribute="centerX" secondItem="5Dm-76-B8t" secondAttribute="centerX" id="d9g-gG-bIU"/>
-                                                <constraint firstItem="VFM-AK-zfq" firstAttribute="leading" secondItem="G4j-cL-BoE" secondAttribute="leadingMargin" constant="81" id="fhm-aT-Tvp"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="5Dm-76-B8t" secondAttribute="bottom" constant="12" id="hNd-bs-4gh"/>
-                                                <constraint firstItem="5Dm-76-B8t" firstAttribute="leading" secondItem="G4j-cL-BoE" secondAttribute="leadingMargin" constant="22" id="hiF-CQ-BKB"/>
-                                                <constraint firstItem="5Dm-76-B8t" firstAttribute="centerX" secondItem="G4j-cL-BoE" secondAttribute="centerX" id="l3z-xm-HXv"/>
-                                                <constraint firstItem="5Dm-76-B8t" firstAttribute="top" secondItem="VFM-AK-zfq" secondAttribute="bottom" constant="35" id="urb-IH-j5X"/>
+                                                <constraint firstItem="VFM-AK-zfq" firstAttribute="top" secondItem="G4j-cL-BoE" secondAttribute="topMargin" constant="20" id="5FN-18-uOe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="S8A-WX-dmd" secondAttribute="trailing" constant="20" id="7W1-JH-umy"/>
+                                                <constraint firstItem="S8A-WX-dmd" firstAttribute="top" secondItem="G4j-cL-BoE" secondAttribute="topMargin" constant="166" id="M80-fp-LLV"/>
+                                                <constraint firstItem="S8A-WX-dmd" firstAttribute="top" secondItem="VFM-AK-zfq" secondAttribute="bottom" constant="39" id="Zp4-B5-ovC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VFM-AK-zfq" secondAttribute="trailing" constant="81" id="e98-6t-L2p"/>
+                                                <constraint firstItem="VFM-AK-zfq" firstAttribute="leading" secondItem="G4j-cL-BoE" secondAttribute="leadingMargin" constant="81" id="lhg-wD-VfV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="S8A-WX-dmd" secondAttribute="bottom" constant="20" id="nVe-a5-iyJ"/>
+                                                <constraint firstItem="S8A-WX-dmd" firstAttribute="leading" secondItem="G4j-cL-BoE" secondAttribute="leadingMargin" constant="20" id="pyC-fw-q5m"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -630,23 +634,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Qmj-mJ-Rca" style="IBUITableViewCellStyleDefault" id="mNl-pA-Yw1">
-                                        <rect key="frame" x="0.0" y="763" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mNl-pA-Yw1" id="Ngt-Fw-rzI">
-                                            <frame key="frameInset" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contribute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qmj-mJ-Rca">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -658,7 +645,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjS-PR-LYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1314" y="2248"/>
+            <point key="canvasLocation" x="-1314.4000000000001" y="2247.5262368815593"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Bny-jA-jAD">
@@ -687,7 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUi-aO-U4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3663" y="2284"/>
+            <point key="canvasLocation" x="-3726" y="2302"/>
         </scene>
         <!--More-->
         <scene sceneID="8G3-Vv-J7C">
