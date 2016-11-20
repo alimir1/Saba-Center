@@ -9,10 +9,8 @@
 import UIKit
 
 class AboutTableViewController: UITableViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
 
@@ -35,7 +33,7 @@ extension AboutTableViewController {
             let historyVC = segue.destination as! DisplayInformationViewController
             historyVC.navigationController?.title = "History"
             historyVC.pageAttributedText = SabaInfo.Informations.history.attributedString
-            historyVC.headerView.image = #imageLiteral(resourceName: "PlaceHolder")
+            historyVC.headerView.image = #imageLiteral(resourceName: "HistoryClock")
         default:
             break
         }
@@ -52,6 +50,12 @@ extension AboutTableViewController {
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        if let footerView = view as? UITableViewHeaderFooterView {
+            footerView.textLabel?.textAlignment = .center
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
