@@ -18,12 +18,12 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
     @IBOutlet weak var shareBarButton: UIBarButtonItem!
     
     var locationManager = CLLocationManager()
-    
     var prayerTimes: [PrayerTimeModel] = [] {
         didSet {
-            self.tableView.reloadData()
+            shareBarButton.isEnabled = true
         }
     }
+    var activityIndicator: ActivityIndicator!
     
     var userLocation: CLLocationCoordinate2D! {
         didSet {
@@ -38,6 +38,10 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator = ActivityIndicator(view: self.view, navigationController: self.navigationController, tabBarController: self.tabBarController)
+        activityIndicator.showActivityIndicator()
+        
         startLocation()
         shareBarButton.isEnabled = false
     }
@@ -48,6 +52,7 @@ class PrayerTimesViewController: UITableViewController, CLLocationManagerDelegat
 
 extension PrayerTimesViewController {
     @IBAction func refreshTable(sender: AnyObject?) {
+        activityIndicator.showActivityIndicator()
         refreshBarButton.isEnabled = false
         shareBarButton.isEnabled = false
         prayerTimes.removeAll()
@@ -56,9 +61,7 @@ extension PrayerTimesViewController {
     }
     
     @IBAction func sharePrayerTimes(sender: AnyObject?) {
-        shareBarButton.isEnabled = false
         guard prayerTimes.count > 0 else {
-            shareBarButton.isEnabled = true
             return
         }
         var prayerTimesToShare = "Today's Prayer Times:"
@@ -73,7 +76,6 @@ extension PrayerTimesViewController {
             if completed {
                 self.dismiss(animated: true, completion: nil)
             }
-            self.shareBarButton.isEnabled = true
         }
         present(activityController, animated: true, completion: nil)
     }
@@ -84,11 +86,43 @@ extension PrayerTimesViewController {
 extension PrayerTimesViewController {
     func startLocation() {
         locationManager.delegate = self
+        startLocationProcess()
+    }
+    
+    func startLocationProcess() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
-        default:
+        case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
+        case .denied:
+            activityIndicator.stopActivityIndicator()
+            refreshBarButton.isEnabled = true
+            shareBarButton.isEnabled = false
+            let alertController = UIAlertController(
+                title: "Location Access Disabled",
+                message: "In order to get prayer times for your location, this app needs to access your location.",
+                preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+                if let url = URL(string: UIApplicationOpenSettingsURLString) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+            alertController.addAction(openAction)
+            self.present(alertController, animated: true, completion: nil)
+        case .restricted:
+            activityIndicator.stopActivityIndicator()
+            refreshBarButton.isEnabled = true
+            shareBarButton.isEnabled = false
+            let alertController = UIAlertController(
+                title: "Location Services Restricted",
+                message: "This app is not authorized to use location services. A possibilily might be due to active restrictions such as parental controls being in place.",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
         }
     }
     
@@ -96,7 +130,6 @@ extension PrayerTimesViewController {
         let prayTimes = PrayTime()
         prayTimes.setTimeFormat(Int32(PrayTime().time12))
         prayTimes.setCalcMethod(Int32(PrayTime().jafari))
-        
         return prayTimes
     }
     
@@ -107,8 +140,11 @@ extension PrayerTimesViewController {
         
         let prayerTimeTimes = configurePrayerTimes().getPrayerTimes(dateComponents, andLatitude: coordinates.latitude, andLongitude: coordinates.longitude, andtimeZone: PrayTime().getZone()) as AnyObject as! [String]
         
-        self.prayerTimes = zip(prayerTimeNames, prayerTimeTimes).map {
-            PrayerTimeModel(name: $0, time: $1)
+        performUIUpdatesOnMain {
+            self.prayerTimes = zip(prayerTimeNames, prayerTimeTimes).map {
+                PrayerTimeModel(name: $0, time: $1)
+            }
+            self.tableView.reloadData()
         }
     }
 }
@@ -168,37 +204,19 @@ extension PrayerTimesViewController {
 // MARK: - CLLocationManager Delegates
 
 extension PrayerTimesViewController {
+    
     @objc(locationManager:didChangeAuthorizationStatus:) func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.requestLocation()
-        case .notDetermined:
-            manager.requestWhenInUseAuthorization()
-        case .restricted, .denied:
-            let alertController = UIAlertController(
-                title: "Location Access Disabled",
-                message: "In order to get prayer times for your location, this app needs to access your location.",
-                preferredStyle: .alert)
-            
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alertController.addAction(cancelAction)
-            let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
-                if let url = URL(string:UIApplicationOpenSettingsURLString) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
-            }
-            alertController.addAction(openAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
+        startLocationProcess()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationManager.delegate = nil
         locationManager.stopUpdatingLocation()
+        activityIndicator.stopActivityIndicator()
+        refreshBarButton.isEnabled = true
         
         if let userCoordinates = manager.location?.coordinate {
             self.userLocation = userCoordinates
-            self.tableView.reloadData()
             print("User Location: \(userCoordinates)")
         } else {
             let alertCtrl = UIAlertController(
@@ -213,12 +231,10 @@ extension PrayerTimesViewController {
             present(alertCtrl, animated: true, completion: nil)
         }
         
-        refreshBarButton.isEnabled = true
-        shareBarButton.isEnabled = true
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Couldn't get the location!")
+        print("Failed to get location!")
     }
 }
 
