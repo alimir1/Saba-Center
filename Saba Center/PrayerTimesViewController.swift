@@ -84,8 +84,12 @@ extension PrayerTimesViewController {
 extension PrayerTimesViewController {
     func startLocation() {
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        default:
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
     
     func configurePrayerTimes() -> PrayTime {
@@ -211,6 +215,10 @@ extension PrayerTimesViewController {
         
         refreshBarButton.isEnabled = true
         shareBarButton.isEnabled = true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Couldn't get the location!")
     }
 }
 
