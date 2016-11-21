@@ -290,7 +290,7 @@
 				TargetAttributes = {
 					49368D761DCF8EC800D3257D = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 396S2E45WK;
+						DevelopmentTeam = M6ZVBN5V88;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -600,12 +600,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = 396S2E45WK;
+				DEVELOPMENT_TEAM = M6ZVBN5V88;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Saba Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center.SabaIGC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -621,12 +621,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = 396S2E45WK;
+				DEVELOPMENT_TEAM = M6ZVBN5V88;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Saba Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center.SabaIGC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
