@@ -605,7 +605,7 @@
 				INFOPLIST_FILE = "Saba Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center.SabaIGC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center.Saba";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -626,7 +626,7 @@
 				INFOPLIST_FILE = "Saba Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center.SabaIGC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Saba-Center.Saba";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Saba Center/Saba Center-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
